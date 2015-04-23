@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: JavaScript For Example. Creating a 5 col table
+    Date: April 2015
+    Reference: http://www.w3schools.com/js/js_loop_for.asp
+    Requires: HTML & jQuery knowledge
+-->
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+   
+   <h1>For Example 01 - Creating a 5 Col Table</h1>
+    
+    <ul>
+        <li>Author: Juan Diego Pérez @pekechis</li>
+        <li>E-mail: contact@jdperez.es</li>
+        <li>Description: JavaScript For Example. Creating a 5 col table</li>
+        <li>Date: April 2015</li>
+        <li>Reference: <a href="http://www.w3schools.com/js/js_loop_for.asp">http://www.w3schools.com/js/js_loop_for.asp</a></li> 
+        <li>Requires: HTML & jQuery knowledge</li>
+    </ul>
+   
+   <h3> How it works </h3>
+    
+   <p> Each time you press "Create" a table with 5 col and the number of rows placed in the input is created</p>
+   
+   <input type="text" id="valor" placeholder="Add Number of Rows">
+   <input type="button" id="add" value="Create">
+   
+   <table id="tabla">       
+   </table>
+   
+    
+<script>
+    //document.ready
+    $(function() {
+    
+    // Counter. Increasing value in each table cell
+    var contador=0;
+    
+    //Create button click listener
+    $('#add').click(function() {
+        
+        //Getting Number of rows from the input
+        var numFilas=parseInt($("#valor").val());
+        
+        //This var will contains 
+        var texto;
+        
+        //Cleaning Table
+        $("#tabla").html("");
+        
+        //Reseting counter
+        contador=0;
+        
+        //For. One loop for each row
+        for(i=0; i<numFilas;i++) {        
+         
+            //Adding the full HTML of the row and increasing cell value on each td
+            texto="<tr>"
+            +"<td>"+(contador++)+"</td>"
+            +"<td>"+(contador++)+"</td>"
+            +"<td>"+(contador++)+"</td>"
+            +"<td>"+(contador++)+"</td>"
+            +"<td>"+(contador++)+"</td>"
+            +"</tr>";            
+            
+            //Appending the full HTML of the row to the table HTML element
+            $("#tabla").append(texto);
+        }
+    
+    });
+    });
+</script>
+</body>
+</html>
