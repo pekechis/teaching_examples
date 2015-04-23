@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: JavaScript Array Example
+    Date: April 2014
+    Reference: http://www.w3schools.com/js/js_arrays.asp // http://www.w3schools.com/js/js_array_methods.asp
+    Requires: HTML & jQuery knowledge
+-->
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+   
+    <h1>Array Example 01</h1>
+    
+    <ul>
+        <li>Author: Juan Diego Pérez @pekechis</li>
+        <li>E-mail: contact@jdperez.es</li>
+        <li>Description: JavaScript Array Example</li>
+        <li>Date: April 2014</li>
+        <li>Reference: <a href="http://www.w3schools.com/js/js_arrays.asp">http://www.w3schools.com/js/js_arrays.asp</a> // <a href="http://www.w3schools.com/js/js_array_methods.asp">http://www.w3schools.com/js/js_array_methods.asp</a></li>
+        <li>Requires: HTML & jQuery knowledge</li>
+    </ul>
+    
+    
+    <h3> How it works </h3>
+    
+    <p> Each time you press "Add" the content of the input will be added to an array and when you press "Show array" all the elements
+        added to the array will be shown as a list</p>
+   <!--
+        Form. Add an element to an array each time we click "Add" button
+        Show all elements added when "Show array" is clicked.
+   -->
+   <input type="text" id="valor" placeholder="Add  a value">
+   <input type="button" id="add" value="Add">
+   <input type="button" id="mostrar" value="Show array">
+   
+   <!--
+        Div where we will show the array content once "Show array" button is pressed
+   -->
+   <div id="lista">
+   </div>
+   
+    
+<script>
+    // document.ready
+    $(function() {
+    
+    //Declaring an empty array
+    var $vector=[];
+    
+    //Add button click listener
+    $("#add").click(function() {
+        
+        //Adding input text content as the last element of the array
+        $vector[$vector.length]=$("#valor").val();
+    });
+    
+    //Show array listener
+    $("#mostrar").click(function() {
+        
+        //Cleaning div
+        $("#lista").html("");
+        
+        //Opening unordered list
+        $("#lista").append("<ul>");
+        
+        
+        
+        for ($i=0;$i<$vector.length;$i++) {
+            $("#lista").append("<li>"+$vector[$i]+"</li>");
+        }
+        
+        //Closing unordered list
+        $("#lista").append("</ul>");
+        
+        //Cleaning array, starting again
+        $vector=[];
+    });
+    
+    });
+</script>
+</body>
+</html>
