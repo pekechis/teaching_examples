@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: HTML5 Canvas Example
+    Date: April 2015
+    Reference: http://www.w3schools.com/html/html5_canvas.asp // http://www.w3schools.com/canvas/default.asp
+    Requires: HTML & jQuery knowledge
+-->
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>CANVAS EXAMPLES 01 </title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <style>
+            #container {
+                width: 850px;
+                margin: 30px auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>CANVAS Example 01</h1>
+
+        <ul>
+            <li>Author: Juan Diego Pérez @pekechis</li>
+            <li>E-mail: contact@jdperez.es</li>
+            <li>Description: JavaScript Array Example</li>
+            <li>Date: April 2014</li>
+            <li>Reference: <a href="http://www.w3schools.com/html/html5_canvas.asp">http://www.w3schools.com/html/html5_canvas.</a> // <a href="http://www.w3schools.com/canvas/default.asp">http://www.w3schools.com/canvas/default.asp</a></li>
+            <li>Requires: HTML & jQuery knowledge</li>
+        </ul>
+
+        <!--
+             CANVAS TAGS
+             First: Example on text and lines
+             Second: Example with lines showing a crossing lines figure
+             Third: Example using rect function
+        -->
+        <div id="container">
+            <h2>Text and lines</h2>
+            <canvas id="myCanvas1" width="800" height="200" style="border:1px solid #000000;"></canvas>
+            <h2>Crossing Lines</h2>
+            <canvas id="myCanvas2" width="800" height="200" style="border:1px solid #000000;"></canvas>
+            <h2>Rectangles</h2>
+            <canvas id="myCanvas3" width="800" height="200" style="border:1px solid #000000;"></canvas>
+        </div>
+
+        <script>
+            // document.ready
+            $(function() {
+
+                //Strings that will be shown
+                var v = ["SEAT", "BMW", "FORD"];
+
+                //Getting the jQuery Object and transforming it to JavaScript object with get(0)
+                var c = $("#myCanvas1").get(0);
+
+                //Setting the context mode - 2d for the moment
+                var ctx = c.getContext("2d");
+
+                //Separation between lines
+                var height = 50;
+                //Font type
+                ctx.font = "30px Arial";
+
+                //Traversing the v array showing the element and the line
+                for (i = 0; i < v.length; i++) {
+                    //Placing the v element
+                    ctx.strokeText(v[i], 350, height);
+                    //Moving the cursor below the text
+                    ctx.moveTo(0, height + 10);
+                    //Drawing the line from left to right
+                    ctx.lineTo(c.width, height + 10);
+                    ctx.stroke();
+                    //Adding 50px in order to draw the new text and line
+                    height = height + 50;
+                }
+
+
+                //Getting the jQuery Object and transforming it to JavaScript object with get(0)    
+                var c = $("#myCanvas2").get(0);
+                ctx = c.getContext("2d");
+
+                //Settinh the start and end points of the first line
+                var x1 = 20;
+                var y1 = 20;
+                var x2 = c.width - 20;
+                ;
+                var y2 = c.height - 20;
+
+                //Separation between the start (and end) of the different lines
+                var step = 30;
+
+                //I will draw lines till the end of the canvas (Starting on the left side)
+                while (x1 < c.width) {
+                    //Moving the cursor to the line start
+                    ctx.moveTo(x1, y1);
+                    //Drawing to end of the line
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                    //Moving 
+                    x1 += step;
+                    x2 -= step;
+                }
+
+                ////Getting the jQuery Object and transforming it to JavaScript object with get(0)    
+                var c = $("#myCanvas3").get(0);
+                ctx = c.getContext("2d");
+
+                //Starting point
+                var x1 = 20;
+                var y1 = 20;
+                //Starting size
+                var width = c.width - 40;
+                var height = c.height - 40;
+                
+                while (width >0  && height>0) {
+                    ctx.rect(x1, y1, width, height);
+                    ctx.stroke();
+                    //Getting the new points and size
+                    x1 += 20;
+                    y1 += 20;
+                    width = width - 40;
+                    height = height - 40;
+                }
+
+            });
+
+        </script>
+    </body>
+</html>
