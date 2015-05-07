@@ -1,0 +1,7 @@
+h1, h2 {
+    text-align: center;
+}
+#container {
+    width: 400px;
+    margin: 30px auto;
+}

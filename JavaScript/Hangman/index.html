@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Simple JavaScript Hangman Game
+    Date: May 2015
+    Requires: HTML & jQuery knowledge
+-->
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple JavaScript Hagman Game</title>
+        <link rel="stylesheet" href="css/ahorcado.css" type="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <h1>Simple JavaScript Hangman Game</h1>
+
+        <ul>
+            <li>Author: Juan Diego Pérez @pekechis</li>
+            <li>E-mail: contact@jdperez.es</li>
+            <li>Description: Simple JavaScript Hangman Game</li>
+            <li>Date: May 2015</li>
+            <li>Requires: HTML & jQuery knowledge</li>
+            <li>Description: All in lowercase. Case Sensitive Game</li>
+            <li>Suggested Improvements: Resetting the game once you win or lose</li>
+        </ul>
+
+        <div id="container">
+            <h1>HANGMAN GAME</h1>
+            <div id="image">
+                <img id="photo" src="">
+            </div>
+            <div id="controls">
+                <input id="letra" type="text" size="1" maxlength="1">
+                <input id="check" type="button" value="CHECK">
+                <h2></h2>
+            </div>
+
+            <div id="results">
+                <h2>letters:</h2>
+            </div>
+        </div>
+
+
+        <script>
+            
+            //Words to guess (you can add more...)
+            var words = ["cat", "dog", "elephant", "bear", "cow", "rabbit", "giraffe", "chicken"];
+            
+            //Hangman images
+            var images = ["img/1.png", "img/2.png", "img/3.png", "img/4.png", "img/5.png", "img/6.png", "img/7.png"];
+            
+            //Number of attempts
+            var numAttempts = 0;
+
+
+            //Given a string returns an array with as many "-" elements as
+            // letters the string has
+            // In example given "HELLLO" returns ["-","-","-","-","-"]
+            function createResultArray(word) {
+                var v = [];
+                for (i = 0; i < word.length; i++) {
+                    v[i] = "-";
+                }
+                return v;
+            }
+
+            //Given a word and a letter isIn return TRUE if the word contains the letter
+            function isIn(word, letter) {
+                if (word.indexOf(letter) == -1)
+                    return false;
+                else
+                    return true;
+            }
+
+            //Returns an array replacing the "-" for the letter
+            //Used when the secretword contains the letter
+            function replaceLetter(cWord, sWord, letter) {
+
+                var v = sWord.split("");
+
+                for (i = 0; i < v.length; i++) {
+                    if (v[i] == letter) {
+                        cWord[i] = letter;
+                    }
+                }
+
+                return cWord;
+            }
+
+            //document.ready
+            $(function() {
+
+                //Setting the first hangman pic
+                $("#photo").attr("src", images[numAttempts]);
+                
+                //Choose a random word from the words array
+                var secretWord = words[Math.floor(Math.random() * words.length)];
+                console.log(secretWord);
+                
+                //Transforming the secret word into an array with as many "-" elements
+                // as letters the secret words have
+                var currentWord = createResultArray(secretWord);
+                console.log(currentWord);
+
+                //Showing the initial status "-------"
+                $("#controls h2").text(currentWord.join(" "));
+
+                //Button click handler
+                $("#check").click(function() {
+
+                    //Getting the letter from the input
+                    var l = $("#letra").val();
+
+                    //Does the secretWord contains the letter
+                    if (isIn(secretWord, l)) {
+                        currentWord = replaceLetter(currentWord, secretWord, l);
+                        $("#controls h2").text(currentWord.join(" "));
+
+                        //No chars left to be guessed?
+                        if (currentWord.indexOf("-") == -1) {
+                            $("#results h2").append("<h1>YOU WIN</h1>");
+                        }
+                    } else {
+                        //NO
+                        //Increasing the number of attempts
+                        numAttempts++;
+                        //Showing the last letter tried
+                        $("#results h2").append(" " + l);
+                        //Update hangman image
+                        $("#photo").attr("src", images[numAttempts]);
+                    }
+
+                    //Is the game finished
+                    if (numAttempts == images.length) {
+                        $("#results h2").append("<h1>YOU'RE DEAD</h1>");
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>
