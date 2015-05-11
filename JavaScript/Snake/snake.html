@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Snake Game
+    Date: May 2015
+    Requires: HTML & jQuery knowledge
+-->
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML CANVAS Snake Game</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <h1>HTML CANVAS Snake Game</h1>
+
+        <ul>
+            <li>Author: Juan Diego Pérez @pekechis</li>
+            <li>E-mail: contact@jdperez.es</li>
+            <li>Date: May 2015</li>
+            <li>Suggested Improvements: Increase speed when the time passes</li>
+        </ul>
+
+        <div id="container">
+            <h1 id="gamename">SNAKE GAME</h1>
+            <canvas id="myCanvas" width="800" height="400" style="border:1px solid #000000;"></canvas>
+        </div>
+
+        <audio id="sonido">
+            <source src="sounds/game_over.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <script>
+
+            $(function() {
+                //Getting the jQuery Object and transforming it to JavaScript object with get(0)
+                var c = $("#myCanvas").get(0);
+                //Setting the context mode - 2d for the moment
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000"; //Red colour for the snake
+
+                var x = 380;
+                var y = 180;
+                var size = 20;
+                var movimiento = "ABAJO";
+
+                var intervalo;
+
+                //If tne snake has already passed to next position the game is also over
+                function isRed(xpos, ypos) {
+                    //Getting data info for pixel in the middle of the nex position
+                    var pixel = ctx.getImageData(xpos + 10, ypos + 10, 1, 1);
+                    var data = pixel.data;
+                    var red = data[0]; //Red component of the color of the pixel
+
+
+                    if (red === 255)
+                        return true;
+                    else
+                        return false;
+                }
+
+                function updatePosition() {
+                    switch (movimiento) {
+                        case "ARRIBA":
+                            y -= 20;
+                            break;
+                        case "ABAJO":
+                            y += 20;
+                            break;
+                        case "DERECHA":
+                            x += 20;
+                            break;
+                        default:
+                            x -= 20;
+                            break;
+                    }
+
+                    if (x < 0 || y < 0 || x > c.width || y > c.height || isRed(x, y)) {
+                        $("h1#gamename").append(":HAS PERDIDO");
+                        //Disabling the time
+                        clearInterval(intervalo);
+                        //Playing game over sound
+                        $("#sonido").get(0).play();
+                    } else {
+                        ctx.fillRect(x, y, size, size);
+                        ctx.stroke();
+                    }
+                }
+
+                intervalo = setInterval(updatePosition, 100);
+
+                $("body").keydown(function(event) {
+                    var tecla = event.which;
+                    switch (tecla) {
+                        case 38:
+                            movimiento = "ARRIBA";
+                            break;
+                        case 40:
+                            movimiento = "ABAJO";
+                            break;
+                        case 39:
+                            movimiento = "DERECHA";
+                            break;
+                        case 37:
+                            movimiento = "IZQUIERDA";
+                            break;
+                        default:
+                    }
+
+                });
+
+            });
+
+        </script>
+    </body>
+</html>
