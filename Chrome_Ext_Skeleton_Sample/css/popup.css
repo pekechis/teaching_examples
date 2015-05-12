@@ -1,0 +1,11 @@
+/* 
+    Created on : 12-may-2015, 17:44:49
+    Author     : Juan Diego Pérez Jiménez @pekechis
+    Contact    : contact@jdperez.es
+    Description: CSS File for a Chrome Extension Skeleton Sample
+*/
+
+body {
+    width: 400px;
+    height: 300px;
+}

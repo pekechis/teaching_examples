@@ -1,0 +1,7 @@
+
+
+//On Document ready
+$(function() {
+ 
+ 
+});
