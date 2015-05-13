@@ -4,10 +4,10 @@
   "description": "Chrome Extension Skeleton Sample for training purposes",
   "author" : "Juan Diego Pérez Jiménez",
   "permissions": [
-    "geolocation",
-    "identity",
     "tabs",
-    "http://ajax.googleapis.com/"
+    "http://ajax.googleapis.com/",
+    "https://maps.google.com/*",
+    "https://maps.googleapis.com/*"
   ],
   "browser_action": {
       "default_title": "My Chrome Extension Skeleton Sample",
@@ -21,5 +21,5 @@
    "js" : ["js/jquery.min.js","js/popup.js"]
   }
   ],
-  "content_security_policy": "script-src 'self' https://maps.googleapis.com/; https://maps.gstatic.com/; object-src 'self'"
+  "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://maps.googleapis.com; img-src https://maps.google.com"
 }
