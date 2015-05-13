@@ -53,7 +53,8 @@ $(function() {
                             var latitud= $(this).children("span.latitud").text(); 
                             var longitud= $(this).children("span.longitud").text(); 
                             console.log("LATITUD:"+latitud+" LONGITUD:"+longitud);
-                            alert("LATITUD:"+latitud+" LONGITUD:"+longitud);
+                            //alert("LATITUD:"+latitud+" LONGITUD:"+longitud);
+                            drawMap(latitud,longitud,$(this).children("h4").text());
     });
    
     loadData();
