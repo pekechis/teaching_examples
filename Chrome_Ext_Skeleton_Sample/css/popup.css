@@ -32,3 +32,8 @@ img.icon {
     margin-top:0px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+

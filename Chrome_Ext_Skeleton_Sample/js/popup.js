@@ -26,11 +26,13 @@ function loadData() {
                 for (i=0; i<estaciones.length;i++) {
                    var text="";
                    text+="<div class='estacion'>";
+                   text+="<a href='"+estaciones[i].uri+"' target=_blank>";
                    text+="<h4>ESTACION: "+estaciones[i].title+"</h4>";
                    text+="Bicis Disponibles: "+estaciones[i].bicisDisponibles;
                    text+=" Anclajes Disponibles: "+estaciones[i].anclajesDisponibles;
                    text+="<span class='latitud'>"+estaciones[i].geometry.coordinates[0]+"</span>";
                    text+="<span class='longitud'>"+estaciones[i].geometry.coordinates[1]+"</span>";
+                   text+="</a>";
                    text+="</div>";
                    $("#resultados").append(text);
                    
