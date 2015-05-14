@@ -4,7 +4,7 @@
   "description": "Chrome Extension Skeleton Sample for training purposes",
   "author" : "Juan Diego Pérez Jiménez",
   "permissions": [
-    "tabs"
+    "tabs"  
     ],
   "browser_action": {
       "default_title": "My Chrome Extension Skeleton Sample",
