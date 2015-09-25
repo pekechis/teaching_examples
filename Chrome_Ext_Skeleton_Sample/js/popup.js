@@ -25,8 +25,8 @@ function loadData() {
                 console.log(estaciones);
                 for (i=0; i<estaciones.length;i++) {
                    var text="";
-                   text+="<div class='estacion'>";
                    text+="<a href='"+estaciones[i].uri+"' target=_blank>";
+                   text+="<div class='estacion'>";
                    text+="<h4>ESTACION: "+estaciones[i].title+"</h4>";
                    text+="Bicis Disponibles: "+estaciones[i].bicisDisponibles;
                    text+=" Anclajes Disponibles: "+estaciones[i].anclajesDisponibles;
