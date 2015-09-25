@@ -1,0 +1,13 @@
+#main, #parrafo {
+    width: 600px;
+    margin: 30px auto;
+}
+
+#formulario, #total {
+    float: left;
+}
+
+#parrafo {
+    clear: left;
+}
+

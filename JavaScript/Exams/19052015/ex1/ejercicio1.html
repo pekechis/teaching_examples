@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link href="ejercicio1.css" rel="stylesheet" type="text/css">
+        <script  src="jquery-1.10.2.min.js"></script>
+        <title>JavaScript Basics Examn</title>
+    </head>
+    <body>
+        <form>
+            <h1>RESTAURANTE "EL CHAVO DEL 8"</h1>
+            <div id="platos">
+                <div id="plato">
+                    <img src="nachos.jpg" />
+                    <h5>Nachos: Precio 5&euro;</h5>
+                    <input type="text" size="5" value="2" />
+                </div>
+                <div id="plato">
+                    <img src="enchilada.jpg" />
+                    <h5>Enchilada: Precio 7&euro;</h5>
+                    <input type="text" size="2" value="1" />
+                </div>         
+                <div id="plato">
+                    <img src="tacos.jpg" />
+                    <h5>Tacos: Precio 10&euro;</h5>
+                    <input type="text" size="2" value="2" />
+                </div>         
+                <div id="plato">
+                    <img src="quesadillas.jpg" />
+                    <h5>Quesadillas: Precio 5&euro;</h5>
+                    <input type="text" size="2" value="3" />
+                </div>
+                <input id="calcular" type="button" value="Calcular Precio"/>
+            </div>
+        </form>
+        <script>
+         
+               $(function() {
+             
+             //Click handler
+             $("#calcular").click(function() {
+                $("input[type=text]").each(function()
+                        
+                );
+                
+             });
+        });
+        </script>
+    </body>
+</html>
