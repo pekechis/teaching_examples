@@ -1,0 +1,36 @@
+# ATOM HTML SNIPPETS
+# 1. HTML SKELETON htmls+tab creates the skeleton of a web page
+# 2. HTML COMMENT hcom+tab creates an html comment
+# 3. HTML AUTHOR HEADER
+'.text.html':
+  'html skeleton':
+    'prefix': 'htmls'
+    'body':  """
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href=" ">
+    </head>
+    <body>
+      <script type="text/javascript" src=" "></script>
+    </body>
+</html>
+"""
+  'html comment':
+    'prefix':'hcom'
+    'body': '<!-- $1 -->'
+  'html author cab':
+    'prefix':'micab'
+    'body': """
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: $1
+    Date: April $2
+    Reference: $3
+    Requires: $4
+-->
+"""
