@@ -1,0 +1,55 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: HTML Tables using the rowspan and colspan attributes
+    Date: September 2015
+    Reference: http://www.w3schools.com/html/html_tables.asp
+    Requires:  Basic MarkUp Language Knowledge and HTML Documents Structure
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TABLES USING THE ROWSPAN AND COLSPAN ATTRIBUTES</title>
+
+  </head>
+  <body>
+      <!-- EXAMPLE USING THE COLSPAN ATTRIBUTE - A CELL COVERS THE POSITION OF MORE THAN A CELL -->
+      <!-- HORIZONTALLY  -->
+      <table border="1">
+        <caption>
+          USING COLSPAN ATTRIBUTE
+        </caption>
+        <!-- FIRST ROW -->
+        <tr>
+          <!-- THIS CELL COVERS TWO POSITIONS -->
+          <th colspan="2"> TWO POSITIONS</th>
+        </tr>
+        <!-- SECOND ROW -->
+        <tr>
+          <td>ONE POSITION</td><td>ONE POSITION</td>
+        </tr>
+      </table>
+
+      <br><!-- NEWLINE -->
+
+      <!-- EXAMPLE USING THE ROWSPAN ATTRIBUTES- A CELL COVERS THE POSITION OF MORE THAN A CELL -->
+      <!-- VERTICALLY  -->
+      <table border="1">
+        <caption>
+          USING ROWSPAN ATTRIBUTE
+        </caption>
+        <!-- FIRST ROW -->
+        <tr>
+          <!-- THIS CELL COVERS TWO POSITIONS -->
+          <th rowspan="2"> TWO POSITIONS</th><td>ONE POSITION</td>
+        </tr>
+        <!-- SECOND ROW -->
+        <tr>
+          <td>ONE POSITION</td>
+        </tr>
+      </table>
+
+  </body>
+</html>
