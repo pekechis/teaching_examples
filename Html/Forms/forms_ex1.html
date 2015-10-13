@@ -1,0 +1,241 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: HTML Form Examples
+    Date: October 2015
+    Reference: http://www.w3schools.com/html/html_forms.asp
+    http://www.w3schools.com/html/html_form_elements.asp
+    http://www.w3schools.com/html/html_form_input_types.asp
+    http://www.w3schools.com/html/html_form_attributes.asp
+    Requires: HTML Basics, HTML Tables, HTML Lists
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM EXAMPLE 01</title>
+  </head>
+  <body>
+
+    <h1 style="text-align:center">HOJA DE INSCRIPCIÓN<br>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    <form name="" method="post" action="">
+      <!-- FIRST FIELDSET - PERSONAL DATA -->
+      <fieldset style="background:#CCCCCC">
+        <legend style="background:white; border:1px solid black">
+          Personal Data(*)
+        </legend>
+        <table>
+          <tr>
+            <td>Last Name:</td><td>First Name:</td><td>Id Number</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" name="lastname" size="30">
+            </td>
+            <td>
+              <input type="text" name="firstname" size="25">
+            </td>
+            <td>
+              <input type="text" name="idnumber" >
+            </td>
+          </tr>
+          <tr>
+            <td>Born in:</td><td>Region:</td><td>Birth Date(dd/aa/aaaa):</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" name="city">
+            </td>
+            <td>
+              <select name="provincia">
+                <option value="">- selecciona -</option>
+                <option value="15">A coru&#241;a</option>
+                <option value="1">&#193;lava</option>
+                <option value="2">Albacete</option>
+                <option value="3">Alicante</option>
+                <option value="4">Almer&#237;a</option>
+                <option value="33">Asturias</option>
+                <option value="5">&#193;vila</option>
+                <option value="6">Badajoz</option>
+                <option value="7">Baleares</option>
+                <option value="8">Barcelona</option>
+                <option value="9">Burgos</option>
+                <option value="10">C&#225;ceres</option>
+                <option value="11">C&#225;diz</option>
+                <option value="39">Cantabria</option>
+                <option value="12">Castell&#243;n</option>
+                <option value="51">Ceuta</option>
+                <option value="13">Ciudad Real</option>
+                <option value="14">C&#243;rdoba</option>
+                <option value="16">Cuenca</option>
+                <option value="99">Extranjero</option>
+                <option value="17">Girona</option>
+                <option value="18">Granada</option>
+                <option value="19">Guadalajara</option>
+                <option value="20">Guip&#250;zcoa</option>
+                <option value="21">Huelva</option>
+                <option value="22">Huesca</option>
+                <option value="23">Ja&#233;n</option>
+                <option value="26">La rioja</option>
+                <option value="35">Las palmas</option>
+                <option value="24">Le&#243;n</option>
+                <option value="25">Lleida</option>
+                <option value="27">Lugo</option>
+                <option value="28">Madrid</option>
+                <option value="29">M&#225;laga</option>
+                <option value="52">Melilla</option>
+                <option value="30">Murcia</option>
+                <option value="31">Navarra</option>
+                <option value="32">Ourense</option>
+                <option value="34">Palencia</option>
+                <option value="36">Pontevedra</option>
+                <option value="37">Salamanca</option>
+                <option value="38">Santa cruz de tenerife</option>
+                <option value="40">Segovia</option>
+                <option value="41">Sevilla</option>
+                <option value="42">Soria</option>
+                <option value="43">Tarragona</option>
+                <option value="44">Teruel</option>
+                <option value="45">Toledo</option>
+                <option value="46">Valencia</option>
+                <option value="47">Valladolid</option>
+                <option value="48">Vizcaya</option>
+                <option value="49">Zamora</option>
+                <option value="50">Zaragoza</option>
+              </select>
+            </td>
+            <td>
+              <input type="date" name="birthdate">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Address:</td><td>Postal Code:</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="text" name="address" size="50">
+            </td>
+            <td>
+              <input type="text" name="postalcode">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <!-- SECOND FIELDSET - ACCESS REQUIREMENTS -->
+      <fieldset style="background-color: bisque">
+        <legend style="background:white; border:1px solid black">
+          Access Requirements
+        </legend>
+        <ul style="list-style:none;">
+          <li>
+            <input type="radio" name="direct">Direct
+            <ul style="list-style:none;">
+              <li>
+                <input type="radio" name="access">Bachillerato LOGSE. Modalidad <input type="text">
+              </li>
+              <li>
+                <input type="radio" name="access">Bachillerato Experimenal
+              </li>
+              <li>
+                <input type="radio" name="access">COU. Opción <input type="text">
+              </li>
+              <li>
+                <input type="radio" name="access">FP2
+              </li>
+              <li>
+                <input type="radio" name="access">Otros (especifique) <input type="text">
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="radio" name="direct">Through Test
+          </li>
+        </ul>
+      </fieldset>
+      <!-- THIRD FIELDSET -  APPLICATION-->
+      <fieldset style="background-color: lightskyblue">
+        <legend style="background:white; border:1px solid black">
+          Application
+        </legend>
+        El/la que suscribe desea ser admitido en este dentro para cursar el ciclo formativo de grado superior:<br>
+        Ciclo Formativo <select>
+          <option></option>
+          <option>Desarrollo de Aplicaciones Web</option>
+          <option>Desarrollo de Aplicaciones Multiplataformas</option>
+          <option>Administración de Sistemas Informáticos en Red</option>
+        </select><br>
+        En caso de no ser admitido, solicita la admisión por orden de preferencia en los siguientes:
+        <table>
+          <tr>
+            <td>Ciclo Formativo</td><td>Centro</td><td>Localidad</td>
+          </tr>
+          <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <!-- FOURTH FIELDSET - DOCS ATTACHED -->
+      <fieldset style="background-color: lightcoral">
+        <legend style="background:white; border:1px solid black">
+          Docs Attached
+        </legend>
+        <table>
+          <tr>
+            <td><input type="checkbox" name="docs">Fotocopia DNI</td>
+            <td><input type="checkbox" name="docs">Certificado Académico</td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="checkbox" name="docs">Otros documentos (especifique) <input type="text" size="40"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <!-- FIFTH FIELDSET - COMMUNICATION -->
+      <fieldset style="background-color: bisque">
+        <legend style="background:white; border:1px solid black">
+          Comunication
+        </legend>
+        De acuerdo con el artículo 42.2 de la Ley 30/1992 de 26 de Noviembre, de Régimen Jurídico de las
+        Administraciones Públicas y del Procedimiento Administrativo Común, según la nueva redacción de la
+        Ley 4/1999, de 13 de enero,se informa que:<br>
+        <ul>
+          <li>El plazo máximo para resolver la presente solicitud es de 3 meses desde la fecha en que haya
+          tenido entrada en el registro del órgano competente para la tramitación, sin perjuicio de lo previsto
+          en el artículo 42.5 de la misma ley</li>
+          <li>El efecto que producirá el silencio administrativo si transcurre el plazo sin que se haya dictado
+          y notificado la resolución, es desestimatorio de la solicitud</li>
+        </ul>
+        <input type="text"> <input type="text"> de <input type="text"> de <select>
+        <option>2006</option>
+        <option>2007</option>
+        <option>2008</option>
+        </select><br>
+        La persona solicitante,<br>
+        <table style="display:block; float:right">
+          <tr>
+            <td style="border:1px solid black; background: white">
+              Registro de Entrada<br><br><br><br><br><br>
+            </td>
+          </tr>
+        </table>
+        <p style="clear:both;">
+          Firma
+        </p>
+      </fieldset>
+    </form>
+    <!-- FOOTER -->
+    <h5 style="border:1px dashed">
+      (*) Los datos personales contenidos en este impreso podrán ser incluidos en un fichero para su tratamiento por la Consejería de
+      Educación, en el uso de las funciones propias que en el ámbito de sus competencias, pudiendo dirigirse a cualquier órgano de la
+      misma para ejercitar los derechos de acceso, rectificación y oposición, según lo dispuesto en la Ley Orgánica 15/1999, de 13 de
+      diciembre, de Protección de Datos de Carácter Personal (BOE núm 298, de 14 de diciembre de 1999)
+    </h5>
+  </body>
+</html>
