@@ -1,5 +1,5 @@
 # EJERCICIO 1
-### Comenzando con PHP
+### Starting with PHP
 
 1. Write a program that show "Hello World!!" in the browser.
 2. Write a program that show "Hello World!!" with bold style in the browser
