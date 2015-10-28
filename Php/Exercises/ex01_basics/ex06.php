@@ -2,8 +2,9 @@
     Author: Juan Diego Pérez @pekechis
     E-mail: contact@jdperez.es
     Description: EXERCISE 06 - SOLUTION
-                  Type a program that using date() function writes Out of Service if
-                  we're not in the first ten days of the current month
+                  Type a program that using date() function writes "Out of Service" if
+                  we're not in the first ten days of the current month or "Active Service"
+                  on the contrary
     Date: October 2015
     Reference: http://www.php.net // http://php.net/manual/function.date.php
                http://php.net/manual/es/function.intval.php
