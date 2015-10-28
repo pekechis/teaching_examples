@@ -1,4 +1,4 @@
-# EJERCICIO 1
+# EXERCISE 01
 ### Starting with PHP
 
 1. Write a program that show "Hello World!!" in the browser.
