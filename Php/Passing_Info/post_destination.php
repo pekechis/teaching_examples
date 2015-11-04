@@ -8,12 +8,7 @@
   </head>
   <body>
       <?php
-
-       if (empty($_GET)) {
-         echo "NO HAS MANDADO NADA";
-       } else {
-         var_dump($_GET);
-       }
+        var_dump($_POST);
       ?>
   </body>
 </html>
