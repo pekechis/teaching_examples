@@ -3,7 +3,7 @@
 
 1. Given an indexed array with the following city names "San Cristóbal","Cucuta","Maracaibo","Caracas" create a web page as close as possible to the following image. Use loops and any function needed
 
-![Excercise 01 Result](http://www.github.com/pekechis/teaching_examples/Php/Excercises/ex02_arrays/ciudades.jpg "Result")
+![Excercise 01 Result](https://github.com/pekechis/teaching_examples/master/Php/Exercises/ex02_arrays/ciudades.jpg "Result")
 
 
 2. Associative arrays
