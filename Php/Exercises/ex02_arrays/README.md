@@ -14,10 +14,14 @@ Create 2 associative arrays with the following elements (as you may notive the k
 
 ("2222222X" => "Pérez" ,"3333333X" =>"Jiménez", "4444444X" => "Martínez", "5555555X" => "Rodríguez )
 
-Then create an embedded PHP programaY crear un programa PHP embebido en HTML que te muestre una tabla donde cada una de las filas contenga el nombre y los apellidos de cada uno de los DNI que deberás obtener de los vectores (todo en diferentes columnas).
+Then create an embedded PHP programa that writes a table where the each row contains the name and the last name of each of one the IDs. Like this.
 
-3. Dado el siguiente array (‘roberto’,’juan’,’marta’,’moria’,’martin’,’jorge’,’miriam’,’nahuel’,’mirta’). Realizar un programa en PHP que lo recorra y genere un nuevo array con aquellos nombres que comiencen con la letra m.Nota:Deberéis buscar una función en la lista de funciones relacionadas con cadena.
+| Name | LastName |
+| Pepe | Perez    |
 
-4. Dado un array enumerativo de 10 elementos de números enteros (sin coma decimal), encontrar el máximo de todos esos números usando una estructura iterativa(bucle) y mostrarlo por pantalla.
 
-5. Partiendo en un array vacío y utilizando una estructura iterativa añade a ese array los 10 primeros múltiplos de 77. Una vez has rellenado el array mostrar el contenido del mismo en un lista HTML numerada .
+3. Given the following array (‘roberto’,’juan’,’marta’,’moria’,’martin’,’jorge’,’miriam’,’nahuel’,’mirta’) write an embedded PHP program that creates a new array with the elements of the first one that starts with "m". Review string related functions : http://php.net/manual/ref.strings.php
+
+4. Given an indexed array of integers find and write the max element into the browser screen
+
+5. Starting with an empty array and using a loop add to this array the first 10 77 multiple. Once the array is filled show the array contect in an ordered list.
