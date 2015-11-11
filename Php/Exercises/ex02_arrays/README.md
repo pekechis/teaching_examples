@@ -8,7 +8,7 @@
 
 2. Associative arrays
 
-Create 2 associative arrays with the following elements (as you may notive the keys are the same in both)
+Create 2 associative arrays with the following elements (as you may notice the keys are the same in both)
 
 ("2222222X" => "Pepe" ,"3333333X" =>"Manuel", "4444444X" => "José", "5555555X" => "Rosa")
 
