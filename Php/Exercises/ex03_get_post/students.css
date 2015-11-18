@@ -1,0 +1,42 @@
+div#container {
+  width: 80%;
+  margin: 100px auto;
+  background-color: #EEEEEE;
+  border: 1px solid #777777;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+#cabecera td {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+tr.contenido td {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+
+#pie td p{
+  text-align: center;
+  border-top: 1px dotted #777777;
+  padding: 5px;
+  margin: 5px 5px 0px 5px;
+}
+
+table {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #37BB0B;
+}
+
+a:hover {
+  color: #999999;
+}

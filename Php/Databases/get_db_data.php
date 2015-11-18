@@ -22,7 +22,7 @@
 
       //TESTING IF THE CONNECTION WAS RIGHT
       if ($connection->connect_errno) {
-          printf("Connection failed: %s\n", $mysqli->connect_error);
+          printf("Connection failed: %s\n", $connection->connect_error);
           exit();
       }
 
@@ -30,7 +30,7 @@
       /* Consultas de selección que devuelven un conjunto de resultados */
       if ($result = $connection->query("SELECT * FROM CLIENTES;")) {
 
-          printf("<p>The select query returned %d rows.</p>", $resultado->num_rows);
+          printf("<p>The select query returned %d rows.</p>", $result->num_rows);
 
       ?>
 
