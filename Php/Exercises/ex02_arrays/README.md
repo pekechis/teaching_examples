@@ -24,4 +24,4 @@ Then create an embedded PHP programa that writes a table where the each row cont
 
 4. Given an indexed array of integers find and write the max element into the browser screen
 
-5. Starting with an empty array and using a loop add to this array the first 10 77 multiple. Once the array is filled show the array contect in an ordered list.
+5. Starting with an empty array and using a loop add to this array the first 10 77 multiple. Once the array is filled show the array content in an ordered list.
