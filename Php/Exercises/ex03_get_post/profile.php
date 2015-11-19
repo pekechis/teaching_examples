@@ -1,7 +1,7 @@
 <!--
     Author: Juan Diego Pérez @pekechis
     E-mail: contact@jdperez.es
-    Description: 
+    Description:
     Date: April
     Reference:
     Requires:
@@ -33,5 +33,20 @@
           $student=$data[$_GET['if']];
       ?>
 
+      <div id="container">
+        <div id="header">
+          <div id="profiletag">
+
+          </div>
+        </div>
+        <div id="profile">
+          <div id="picture">
+
+          </div>
+          <div id="data">
+
+          </div>
+        </div>
+      </div>
   </body>
 </html>
