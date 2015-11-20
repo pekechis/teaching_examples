@@ -1,4 +1,55 @@
+/* Main Container */
 #container {
-  width: 80%;
+  width: 400px;
   margin: 20px auto;
+  overflow-y: auto;
+  border: 1px solid #8FEEDC;
+}
+
+/* Header */
+#header {
+  background-color: #8FEEDC;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+#profiletag {
+  padding-left: 50px;
+}
+
+#profiletag h5 {
+  margin:0px;
+  border-top: 1px  solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  background-color: white;
+  color: #8FEEDC;
+}
+
+/* Profile Content */
+#picture {
+  width: 150px;
+  float:left;
+  padding: 10px;
+}
+
+#picture img {
+  border: 1px solid #8FEEDC;
+  width: 120px;
+  height: 220px;
+}
+
+#data {
+  width: 200px;
+  float:left;
+}
+
+#data p {
+  margin: 5px;
+  padding-left: 10px;
+  font-size: 0.8em;
 }
