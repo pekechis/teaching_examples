@@ -1,0 +1,25 @@
+#container {
+  width: 50%;
+  margin: 20px auto;
+}
+
+#personaldata input {
+  display: block;
+  margin-left:40px;
+
+}
+
+label {
+  float: left;
+  font-weight: bold;
+  width: 25%;
+}
+
+#buttons {
+  text-align: center;
+  padding: 10px;
+}
+
+p {
+  padding-left:20px;
+}

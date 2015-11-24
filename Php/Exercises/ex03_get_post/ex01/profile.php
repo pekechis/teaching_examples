@@ -88,7 +88,7 @@
               'address' => 'San Jacinto 79',
               'phone' => '955575859',
               'email' => 'student7@iestriana.es',
-              'img' => 'padme.jdopg'
+              'img' => 'padme.jpg'
             ),
             array(
               'id' => '88888888X',
