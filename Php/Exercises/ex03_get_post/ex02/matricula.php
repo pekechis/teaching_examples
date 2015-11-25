@@ -35,6 +35,12 @@
                   </select>
             </fieldset>
             <fieldset id="topics">
+              <!-- LET'S CHECK IF WE CAME FROM AN EMPTY TOPICS SELEECTIO -->
+              <?php
+                 if (isset($_GET['message'])) {
+                   echo "<p id='error'>MUST SELECT AL LEAST ONE TOPIC</p>";
+                 }
+              ?>
               <legend>Topics</legend>
                 <div><input type="checkbox" name="topics[]" value="Hardware Fundamentals">Hardware Fundamentals</div>
                 <div><input type="checkbox" name="topics[]" value="Databases Management">Databases Management</div>
@@ -52,6 +58,13 @@
             </div>
           </form>
         <?php else: ?>
+
+            <!-- IF NO TOPICS SELECTED BACK TO THE FORM -->
+            <?php
+              if (sizeof($_POST['topics'])==0) {
+                header("Location: matricula.php?message=notopics");
+              }
+            ?>
             <!-- FORM SUBMITTED -->
             <!-- SHOW THE RESULTS -->
             <h1>Registration Successful</h1>

@@ -23,3 +23,8 @@ label {
 p {
   padding-left:20px;
 }
+
+
+#error {
+  color: red;
+}
