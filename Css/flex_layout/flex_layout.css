@@ -1,0 +1,50 @@
+/** MAIN CONTAINER **/
+#container {
+  width: 80%;
+  overflow-y: auto;
+  margin:10px auto;
+}
+
+/** STYLES FOR HEADER AND FOOTER **/
+
+#header, #footer {
+  height: 100px;
+  background-color: #CCCCCC;
+}
+
+/** MAIN BODY **/
+#body {
+  overflow-y: auto;
+}
+
+/** SIDEBAR AND ELMENTS **/
+#sidebar {
+  float:left;
+  width: 20%;
+  background-color: red;
+  height: 500px;
+}
+
+#sidebar div {
+  width: 80%;
+  height: 100px;
+  background-color: blue;
+  margin:20px;
+}
+
+#content {
+  float:left;
+  background-color: blue;
+  height: 500px;
+  width: 80%;
+}
+
+#content div {
+  width: 20%;
+  float:left;
+  height: 200px;
+  background-color: red;
+  margin-left: 3%;
+  margin-top:50px;
+
+}
