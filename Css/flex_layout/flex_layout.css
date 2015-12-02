@@ -23,13 +23,16 @@
   width: 20%;
   background-color: red;
   height: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
+/** FLEX ELEMENTS NEED TO HAVE A SIZE IN THE DIRECTION THEY'RE GOING TO GROW **/
 #sidebar div {
   width: 80%;
-  height: 100px;
   background-color: blue;
-  margin:20px;
+  height: 200px;
+  margin: 10px;
 }
 
 #content {
@@ -37,14 +40,13 @@
   background-color: blue;
   height: 500px;
   width: 80%;
+  display:flex;
+  flex-direction: row;
 }
 
 #content div {
-  width: 20%;
-  float:left;
-  height: 200px;
   background-color: red;
-  margin-left: 3%;
-  margin-top:50px;
-
+  width: 400px;
+  margin: 10px;
+  align-items: stretch;
 }
