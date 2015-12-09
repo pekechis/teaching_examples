@@ -15,7 +15,7 @@
             <img src="potion.jpg">
           </div>
           <div id="text">
-              <h5>Magic Potion for Studens</h5>
+              <h5>Magic Potion for Students</h5>
               <p>A wonderful product for passing any exam</p>
               <a href="add_to_cart.php?id=75" id="button">Add to cart</a>
           </div>
