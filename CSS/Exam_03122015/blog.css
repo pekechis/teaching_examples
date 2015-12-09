@@ -1,0 +1,177 @@
+/* MAIN CONTAINER */
+#container {
+  width: 80%;
+  margin: 10px auto;
+  overflow-y: auto;
+}
+
+p {
+  margin: 0px;
+}
+/* HEADER ELEMENT */
+#header1, #header2 {
+  overflow-y:auto;
+}
+
+#header1 div {
+  float: left;
+}
+
+#header1 h1 {
+  margin:0px;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+
+#header1 p {
+  margin:0px 5px;
+  color: #777777;
+  font-size: 1.2em;
+}
+
+#header1 span {
+  color: green;
+  font-weight: bold;
+}
+
+#header2 div {
+  float: right;
+}
+
+#header2 li {
+  float: right;
+}
+
+#header2 p {
+  display: inline;
+  margin: 0px 10px;
+}
+
+#little_border {
+  border-left: 1px solid #777777;
+  padding-left: 3px;
+}
+/* MENU ELEMENTS */
+#menu {
+  overflow-y: auto;
+  background-color: #303030;
+  font-weight: bold;
+  margin: 10px 0px;
+  clear: both;
+}
+
+#menu a {
+  text-decoration: none;
+  color: white;
+}
+
+#menu ul {
+  margin: 0px;
+  padding-left: 0px;
+}
+
+#menu li {
+  float:left;
+  display: inline;
+  padding: 15px 0px;
+}
+
+#menu li p {
+  border-right: 1px solid white;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#menu li:hover {
+  background-color: #72b625;
+}
+
+#menu input {
+  margin-top: 15px;
+  background-color: #303030;
+  border:0px;
+  width: 200px;
+}
+
+#menu form {
+  float:right;
+  margin-right: 10px;
+}
+
+/* BODY ELEMENTS */
+#body {
+  overflow-y: auto;
+  position: relative;
+
+}
+
+#body a {
+  text-decoration: none;
+  color: white;
+}
+
+#body img {
+  width: 100%;
+  height: auto;
+}
+
+#inner_frame {
+  position: absolute;
+  width: 40%;
+  bottom: 30px;
+  left: 30px;
+  background-color: #777777;
+  color: white;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+
+#arrow1,#arrow2 {
+  padding: 10px;
+  background-color: #777777;
+  color: white;
+  font-weight: bold;
+  bottom: 30px;
+  opacity: 0.8;
+}
+
+#arrow1 {
+  position: absolute;
+  right: 50px;
+
+}
+
+#arrow2 {
+  position: absolute;
+  right: 80px;
+}
+/* FOOT ELEMENTS */
+#foot {
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+#foot div {
+  float: left;
+}
+
+.foot_element {
+  width: 33%;
+}
+
+.foot_img {
+  width: 20%;
+}
+
+.foot_text {
+  width: 80%;
+}
+
+.foot_text h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.
