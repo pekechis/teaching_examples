@@ -1,0 +1,37 @@
+#container {
+  width: 600px;
+  margin: 20px auto;
+  overflow-y: auto;
+}
+
+#container h4 {
+  background-color: #AAAAAA;
+  color: white;
+  font-weight: bold;
+}
+
+#container #product {
+  float:left;
+  width: 150px;
+  padding: 20px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+#container #text {
+  float: left;
+  margin-top: 20px;
+  width: 300px;
+}
+
+#container #text a {
+  color: white;
+  background-color: #AAAAAA;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
