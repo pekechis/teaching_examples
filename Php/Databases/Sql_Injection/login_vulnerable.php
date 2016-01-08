@@ -1,3 +1,9 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: LOGIN VULNERABLE TO SQL INJECTION
+    Date: January 2016     
+-->
 <?php
   session_start();
 ?>

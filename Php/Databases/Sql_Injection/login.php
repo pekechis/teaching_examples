@@ -1,3 +1,11 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: LOGIN WITH PREPARED STATEMENTS. NOT VULNERABLE TO SQL
+                 INJECTION
+    Date: January 2016
+    Reference: http://php.net/manual/en/mysqli.quickstart.prepared-statements.php
+-->
 <?php
   session_start();
 ?>
@@ -16,7 +24,7 @@
         if (isset($_POST["user"])) {
 
           //CREATING THE CONNECTION
-          $connection = new mysqli("localhost", "tf", "12345", "tf");
+          $connection = new mysqli("localhost", "tf", "12345", "usuarios");
 
           //TESTING IF THE CONNECTION WAS RIGHT
           if ($connection->connect_errno) {
@@ -26,33 +34,43 @@
 
           //MAKING A SELECT QUERY
           //Password coded with md5 at the database. Look for better options
-          $consulta="select * from usuarios where
-          username='".$_POST["user"]."' and password=md5('".$_POST["password"]."');";
+
+          //SHOWING THE UNSAFE VERSION -- SQL INJECTION POSSIBLE
+          //$consulta="select * from usuarios where
+          //username='".$_POST["user"]."' and password=md5('".$_POST["password"]."');";
+          $query = $connection->prepare("SELECT * FROM usuarios
+            WHERE username=? AND password=md5(?)");
+
+          //Binding the ? to the post values
+          $query->bind_param("ss",$_POST["user"],$_POST["password"]);
+
 
           //Test if the query was correct
           //SQL Injection Possible
           //Check http://php.net/manual/es/mysqli.prepare.php for more security
-          if ($result = $connection->query($consulta)) {
+          if ($query->execute()) {
 
               //No rows returned
-              if ($result->num_rows===0) {
+              if ($query->affected_rows===0) {
                 echo "LOGIN INVALIDO";
               } else {
                 //VALID LOGIN. SETTING SESSION VARS
                 $_SESSION["user"]=$_POST["user"];
                 $_SESSION["language"]="es";
 
+                //Redirecting to the Start Page
                 header("Location: index.php");
               }
 
           } else {
             echo "Wrong Query";
+
             var_dump($consulta);
           }
       }
     ?>
 
-    <form action="login_vulnerable.php" method="post">
+    <form action="login.php" method="post">
 
       <p><input name="user" required></p>
       <p><input name="password" type="password" required></p>
