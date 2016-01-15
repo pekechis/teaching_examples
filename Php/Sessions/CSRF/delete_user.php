@@ -11,7 +11,7 @@
   }
 
   //Already logged
-  if (isser($_GET["id"])) {
+  if (isset($_GET["id"])) {
 
     //CREATING THE CONNECTION
     $connection = new mysqli("localhost", "tf", "12345", "usuarios");
@@ -23,7 +23,7 @@
     }
 
     //BUILDING THE DELETE  QUERY
-    $query = $connection->prepare("DELETE * FROM usuarios
+    $query = $connection->prepare("DELETE FROM usuarios
       WHERE id=?");
 
     //Binding the ? to the post values
