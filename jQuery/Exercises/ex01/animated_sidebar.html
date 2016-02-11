@@ -37,6 +37,9 @@
   <script>
     $(function() {
 
+      //Hiding the open arrow when the page loads
+      $("#abrir").hide();
+      
       $("#abrir").on("click", function() {
         console.log("Opening");
         $("#content").animate({
@@ -58,8 +61,7 @@
         $("#abrir").show();
       });
 
-      //Hiding the open arrow when the page loads
-      $("#abrir").hide();
+
 
     });
   </script>
