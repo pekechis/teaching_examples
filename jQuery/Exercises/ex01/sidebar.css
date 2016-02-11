@@ -1,0 +1,29 @@
+#sidebar {
+  position: fixed;
+  background-color: #AAAAAA;
+  border: 5px solid black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top:100px;
+  left: 0;
+  height: 300px;
+  widht: 180px;
+  box-sizing: border-box;
+}
+
+#sidebar div {
+  float: left;
+}
+
+#content {
+  width: 120px;
+  margin-top: 20px;
+}
+
+#icons {
+  width: 60px;
+}
+
+.arrow {
+  margin-top: 30px;
+}
