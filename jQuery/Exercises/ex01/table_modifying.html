@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Modifying (DOM) with jQuery</title>
+    <link rel="stylesheet" type="text/css" href="table_modifying.css">
+    <script type="text/javascript" src="./js/jquery-1.12.0.js"></script>
+  </head>
+  <body>
+      <div id="container">
+          <h1>Simple Table Modifying. Changing DOM</h1>
+          <div id="header">
+            <div><input id="fillvalue" type="text" placeholder="Insert Value"/></div>
+            <div>
+              <input id="add" type="button" value="Añadir"/>
+              <input id="remove" type="button" value="Borrar"/>
+              <input id="fill" type="button" value="Rellenar"/>
+            </div>
+          </div>
+          <table>
+            <tr>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+            </tr>
+            <tr>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+            </tr>
+            <tr>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+            </tr>
+            <tr>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+            </tr>
+          </table>
+      </div>
+      <script>
+
+        $(function() {
+            $("tr:odd").addClass("par");
+
+            $("input#add").on("click", function() {
+              if ($("table tr:last").length>0) {
+                $("table tr:last").clone().appendTo("table");
+              } else {
+                $("table").append("<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>");
+              }
+
+              $("tr").removeClass("par");
+              $("tr:odd").addClass("par");
+            });
+
+            $("input#remove").on("click", function() {
+              $("table tr:last").remove();
+            });
+
+            $("input#fill").on("click", function() {
+              $("td").text($("input#fillvalue").val()) ;
+            });
+        });
+      </script>
+  </body>
+</html>

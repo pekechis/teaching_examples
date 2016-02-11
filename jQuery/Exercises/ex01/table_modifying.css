@@ -1,0 +1,29 @@
+#container {
+  width: 600px;
+  margin:10px auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+}
+
+#header {
+  width: 250px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#header div {
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.par {
+  background-color: #888888;
+}
