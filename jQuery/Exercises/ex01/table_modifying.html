@@ -39,12 +39,14 @@
             $("tr:odd").addClass("par");
 
             $("input#add").on("click", function() {
+
               if ($("table tr:last").length>0) {
                 $("table tr:last").clone().appendTo("table");
               } else {
                 $("table").append("<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>");
               }
-
+              //$("table").append("<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>");
+              //$("table tr:last").clone().appendTo("table");
               $("tr").removeClass("par");
               $("tr:odd").addClass("par");
             });

@@ -1,0 +1,44 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Simple Image Gallery using jQuery
+    Date: February 2016
+    Reference: http://api.jquery.com
+    Requires: HTML, CSS and basic jQuery and javascript knowledge
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="./image_gallery.css">
+    <script type="text/javascript" src="./js/jquery-1.12.0.js"></script>
+  </head>
+  <body>
+      <div id="container">
+        <img id="main_img" src="" />
+        <img id="left" src="" />
+        <img id="right" src="" />
+      </div>
+      <script>
+        $(function() {
+
+          current=0;
+          images= ["1.png","2.png","3.png","4.png"];
+
+          //Hide the left arrow at the beginning
+          $("#left").hide();
+
+          $("#right").click(function(event) {
+
+          });
+
+          $("#left").click(function(event) {
+
+          });
+
+        });
+      </script>
+  </body>
+</html>

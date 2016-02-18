@@ -33,7 +33,6 @@ li {
 
 #first_level > li > ul > li {
   background-color: lightyellow;
-  width: 100%;
   width: 150px;
 }
 

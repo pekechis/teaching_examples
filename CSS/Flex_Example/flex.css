@@ -1,0 +1,63 @@
+/* MAIN CONTAINER. Centered */
+#main {
+  width: 80%;
+  margin: 10px auto;
+
+}
+
+/* HEADER: Just for creating a semi real layout */
+#header {
+  height: 100px;
+  background-color: blue;
+}
+
+/* CONTENT with a fixed height. Created for using flex elementes in height
+   dimension */
+#content {
+  height: 500px;
+}
+
+/* LEFTBAR AND MAIN_CONTENT ARE FLOATING LEFT */
+#content > div {
+  float: left;
+  height: 500px;
+}
+
+#leftbar {
+  width: 20%;
+  background-color: red;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#leftbar div {
+  background-color: yellow;
+  width: 80%;
+  margin: 10px auto;
+  height: 1000px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#main_content {
+  width: 80%;
+  background-color: green;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: stretch;
+}
+
+#main_content div {
+  background-color: yellow;
+  margin: 10px 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 1000px;
+}
+
+div#last {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
