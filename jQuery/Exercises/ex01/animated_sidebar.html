@@ -1,0 +1,70 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Simple Sliding Side Bar using jQuery
+    Date: January
+    Reference: http://api.jquery.com
+    Requires: HTML, CSS an basic jQuery knowledge
+-->
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple sliding side bar using jquery</title>
+  <link rel="stylesheet" type="text/css" href="sidebar.css">
+  <script src="js/jquery-1.12.0.js"></script>
+</head>
+
+<body>
+
+  <div id="sidebar">
+    <div id="content">
+      <img src="img/jQuery.gif" />
+      <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+      </ul>
+    </div>
+    <div id="icons">
+      <img class="arrow" id="cerrar" src="img/close_arrow.png" />
+      <img class="arrow" id="abrir" src="img/open_arrow.png" />
+    </div>
+  </div>
+  <script>
+    $(function() {
+
+      //Hiding the open arrow when the page loads
+      $("#abrir").hide();
+      
+      $("#abrir").on("click", function() {
+        console.log("Opening");
+        $("#content").animate({
+          width: "+=120",
+          opacity: 1
+        }, 1000);
+        $(this).hide();
+        $("#cerrar").show();
+      });
+
+      //Click handler for closing arrow
+      $("#cerrar").click(function() {
+        console.log("Closing");
+        $("#content").animate({
+          width: "-=120",
+          opacity: 0
+        }, 1000);
+        $(this).hide();
+        $("#abrir").show();
+      });
+
+
+
+    });
+  </script>
+</body>
+
+</html>
