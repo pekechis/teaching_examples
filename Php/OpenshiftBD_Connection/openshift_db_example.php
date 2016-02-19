@@ -19,7 +19,8 @@
     <?php
 
       //CREATING THE CONNECTION
-      $connection = new mysqli("localhost", "tf", "12345", "TalleresFaber");
+      $connection = new mysqli($db_host, $db_user, $db_password, $db_name);
+      $connection->set_charset("utf8");
 
       //TESTING IF THE CONNECTION WAS RIGHT
       if ($connection->connect_errno) {
@@ -29,7 +30,7 @@
 
       //MAKING A SELECT QUERY
       /* Consultas de selección que devuelven un conjunto de resultados */
-      if ($result = $connection->query("SELECT * FROM CLIENTES;")) {
+      if ($result = $connection->query("select * from clientes;")) {
 
           printf("<p>The select query returned %d rows.</p>", $result->num_rows);
 
