@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="ex02.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+
+      <div id="container">
+        <h1>Barra de progreso</h1>
+        <div id="contenido">
+            <div id="barras">
+            </div>
+            <div id="porcentaje">
+              <h1 id="valor"></h1>
+            </div>
+        </div>
+        <div id="botones">
+          <input type="button" id="add" value="+">
+          <input type="button" id="remove" value="-">
+        </div>
+      </div>
+      <script>
+
+      $(function() {
+
+          var numbarras=0;
+          $("h1#valor").text(numbarras*10+"%");
+
+          $("#add").click(function() {
+            if (numbarras<10) {
+              $("#barras").append("<div class='barra'></div>");
+              numbarras=numbarras+1;
+              $("h1#valor").text(numbarras*10+"%");
+
+              if (numbarras<=4) {
+                $("#barras div:last-child").addClass("rojo");
+              } else if (numbarras<=7) {
+                $("#barras div:last-child").addClass("amarillo");
+              } else {
+                $("#barras div:last-child").addClass("verde");
+              }
+            }
+          });
+
+          $("#remove").click(function() {
+            if (numbarras>0) {
+              $("#barras div:last-child").remove();
+              numbarras=numbarras-1;
+              $("h1#valor").text(numbarras*10+"%");
+
+
+            }
+          });
+
+
+      });
+
+      </script>
+  </body>
+</html>

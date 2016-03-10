@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./ex.css"  />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+      <div id="container">
+
+        <div id="superior">
+            <h3>CONTROLES GENERALES</h3>
+            <input type="button" id="om_general" value="Ocultar/mostrar" />
+            <input type="button" id="resetear" value="Resetear" />
+        </div>
+        <div id="contenido">
+            <div class="fila">
+                <div class="botones">
+                  <input type="button" class="ocultar" value="Ocultar/mostrar" />
+                  <input type="button" class="mas50" value="+50" />
+                  <input type="button" class="menos50" value="-50" />
+                </div>
+                <div id="rojo" class="bloque">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="botones">
+                  <input type="button" class="ocultar" value="Ocultar/mostrar" />
+                  <input type="button" class="mas50" value="+50" />
+                  <input type="button" class="menos50" value="-50" />
+
+                </div>
+                <div id="azul" class="bloque">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="botones">
+                  <input type="button" class="ocultar" value="Ocultar/mostrar" />
+                  <input type="button" class="mas50" value="+50" />
+                  <input type="button" class="menos50" value="-50" />
+                </div>
+                <div id="verde" class="bloque">
+                </div>
+            </div>
+        </div>
+      </div>
+      <script>
+        $(function() {
+          console.log("Ready");
+
+          $(".ocultar").click(function(event){
+            console.log("Click");
+            $(this).parent().next().toggle();
+          });
+
+          $(".mas50").click(function(event){
+            console.log("Click");
+            if ($(this).parent().next().width() <500) {
+              $(this).parent().next().animate({width: "+=50"},1000);
+            }
+          });
+
+          $(".menos50").click(function(event){
+            console.log("Click");
+            $(this).parent().next().animate({width: "-=50"},1000);
+          });
+
+          $("#resetear").click(function() {
+            console.log("reseteo");
+            $(".bloque").width(400);
+            $(".bloque").show();
+          });
+
+          $("#om_general").click(function(event) {
+            $(".bloque").toggle();
+          });
+
+        });
+      </script>
+  </body>
+</html>

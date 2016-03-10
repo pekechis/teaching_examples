@@ -1,0 +1,47 @@
+#container {
+  width: 800px;
+  margin: 20px auto;
+}
+
+#contenido div {
+  float: left;
+  overflow-y: auto;
+}
+
+#barras {
+  width: 600px;
+  height: 200px;
+}
+
+#porcentaje {
+  width: 200px;
+  height: 200px;
+}
+
+#botones {
+  text-align: center;
+}
+
+input {
+  width: 100px;
+  height: 100px;
+}
+
+.barra {
+  float: left;
+  height: 150px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.verde {
+  background-color: green;
+}
+
+.amarillo {
+  background-color: yellow;
+}

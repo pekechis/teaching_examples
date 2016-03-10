@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="ex01.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+
+      <div id="container">
+
+        <div id="valores">
+          <p>
+              <label>X</label>
+              <input id="x" type="text"/>
+          </p>
+          <p>
+              <label>Y</label>
+              <input id="y" type="text"/>
+          </p>
+        </div>
+        <div id="botones">
+
+          <p><input class="operacion" id="suma" type="button" value="SUMA"></p>
+          <p><input class="operacion" id="resta" type="button" value="RESTA"></p>
+          <p><input class="operacion" id="multiplicacion" type="button" value="MULTIPLICACION"></p>
+          <p><input class="operacion" id="division" type="button" value="DIVISION"></p>
+        </div>
+        <div id="resultado">
+          <h1>RESULTADO </h1>
+
+          <h3 id="valorfinal"></h3>
+        </div>
+
+      </div>
+      <script>
+      $(function() {
+
+        $(".operacion").click(function() {
+
+
+          var x=parseInt($("#x").val());
+          var y=parseInt($("#y").val());
+
+            var resultado;
+            var cadenaprevia;
+
+            if ($(this).val()=="SUMA")
+            {
+              resultado=x+y;
+              cadenaprevia="X+Y=";
+            } else if ($(this).val()=="RESTA") {
+              resultado=x-y;
+              cadenaprevia="X-Y=";
+            } else if ($(this).val()=="MULTIPLICACION") {
+              resultado= x*y;
+              cadenaprevia="X*Y=";
+            } else {
+              resultado = x/y;
+              cadenaprevia="X/Y=";
+            }
+
+            $("#valorfinal").text(cadenaprevia+resultado);
+        });
+
+      });
+      </script>
+  </body>
+</html>

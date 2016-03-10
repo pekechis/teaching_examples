@@ -1,0 +1,31 @@
+#container {
+
+  width: 800px;
+  margin: 50px auto;
+}
+
+
+#container > div {
+  float:left;
+}
+
+#botones {
+  width: 300px;
+}
+
+#valores {
+  width: 200px;
+}
+
+#resultado {
+  width: 200px;
+  height: 400px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#botones input {
+  width: 250px;
+  font-size: 1.5em;
+  height: 50px;
+}

@@ -1,0 +1,53 @@
+
+#container {
+  margin: 10px auto;
+  width: 1000px;
+}
+
+#superior {
+  float: right;
+  margin: 30px;
+}
+
+h3 {
+  background-color: green;
+  color: white;
+}
+#contenido {
+  clear: both;
+}
+.fila {
+  width: 680px;
+  margin: 10px 10px;
+  height: 100px;
+}
+
+.botones {
+  width: 150px;
+  float: left;
+  border-right: 1px solid black;
+}
+
+.bloque {
+  width: 400px;
+  float: left;
+  height: 100px;
+  margin-left: 5px;
+}
+
+#contenido input {
+  width: 130px;
+  margin: 5px;
+}
+
+#rojo {
+  background-color: red;
+}
+
+#azul {
+  background-color: blue;
+}
+
+#verde {
+  background-color: green;
+}
