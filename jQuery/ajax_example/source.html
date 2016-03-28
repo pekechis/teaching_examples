@@ -1,3 +1,11 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Simple Ajax Example with jQuery
+    Date: March
+    Reference: http://api.jquery.com/jquery.ajax/
+    Requires: jQuery and HTML Knowledge
+-->
 <!DOCTYPE html>
 <html lang="">
 
@@ -10,42 +18,42 @@
 
 <body>
 
+  <!-- HTML CODE -->
   <div>
     <img src="img/cart.png" align="middle" width="100"/><span id="elementos">0</span>
   </div>
   <h2>LISTA DE PRODUCTOS</h2>
   <div>
     <img src="img/alienware.jpg" align="middle" width="300"/>
-    <input id="addtobasket" value="Añadir a la cesta" type="button">
+    <input id="addtobasket" value="Add to Cart" type="button">
   </div>
 
   <script>
     $(function() {
 
+      //Click Handler for the Add to the Cart button
       $("#addtobasket").click(function() {
 
+        //When the button is clicked we make and asynchronous
+        //call to the url param expecting text as returned data
         $.ajax({
             url: "destination.html",
             dataType: "text",
           })
-          .done(function(data) {
+          .done(function(data) { //Function executed when the ajax call has returned
 
-              data= $.trim(data);
+              data= $.trim(data); //Remove spaces, new lines etc..
 
+              //If OK is received we update the amount of items in the shopping cart
               if (data == "OK") {
                 var current = parseInt($("#elementos").text());
-
-                alert("Element Added to the Shopping Cart");
-
                 $("#elementos").text(current+1);
-
               } else {
+                //Otherwise, we show an error dialog
                 alert("Can't add the element to the Shopping Cart");
               }
-          }
-          );
+          });
       });
-
     });
   </script>
 </body>
