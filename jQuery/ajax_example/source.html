@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple AJAX Example with jQuery - SOURCE</title>
+  <script src="js/jquery-1.12.0.js"></script>
+</head>
+
+<body>
+
+  <div>
+    <img src="img/cart.png" align="middle" width="100"/><span id="elementos">0</span>
+  </div>
+  <h2>LISTA DE PRODUCTOS</h2>
+  <div>
+    <img src="img/alienware.jpg" align="middle" width="300"/>
+    <input id="addtobasket" value="Añadir a la cesta" type="button">
+  </div>
+
+  <script>
+    $(function() {
+
+      $("#addtobasket").click(function() {
+
+        $.ajax({
+            url: "destination.html",
+            dataType: "text",
+          })
+          .done(function(data) {
+
+              data= $.trim(data);
+
+              if (data == "OK") {
+                var current = parseInt($("#elementos").text());
+
+                alert("Element Added to the Shopping Cart");
+
+                $("#elementos").text(current+1);
+
+              } else {
+                alert("Can't add the element to the Shopping Cart");
+              }
+          }
+          );
+      });
+
+    });
+  </script>
+</body>
+
+</html>
