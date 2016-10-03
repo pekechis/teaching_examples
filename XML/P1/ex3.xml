@@ -1,0 +1,66 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<cookbook>
+  <recipe>
+    <name>Huevos Fritos con Chorizo</name>
+    <ingredients>
+      <ingredient>
+        <name>Huevos</name>
+        <quantity>1</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Chorizo</name>
+        <quantity>200 gr.</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Aceite</name>
+        <quantity>100 ml</quantity>
+      </ingredient>
+    </ingredients>
+    <process>
+      <step order="1">Echar aceite en la sartén y calentar</step>
+      <step order="2">Echar el chorizo y freirlo</step>
+      <step order="3">Echar el huevo y freirlo</step>
+    </process>
+  </recipe>
+  <recipe>
+    <name>Ensaladilla</name>
+    <ingredients>
+      <ingredient>
+        <name>Huevos</name>
+        <quantity>2</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Papata</name>
+        <quantity>2 Uds</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Zanahoria</name>
+        <quantity>2 Uds</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Maíz</name>
+        <quantity>250 gr</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Guisante</name>
+        <quantity>2 Uds</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Mayonesa</name>
+        <quantity>300 ml</quantity>
+      </ingredient>
+      <ingredient>
+        <name>Atún</name>
+        <quantity>2 latas</quantity>
+      </ingredient>
+    </ingredients>
+    <process>
+      <step order="1">Cocer todas las verduras</step>
+      <step order="2">Dejar enfriar</step>
+      <step order="3">Partir en trozos los huevos, las patatas y las zanahorias</step>
+      <step order="4">Mezclar todo con el atún</step>
+      <step order="5">Añadir mayonesa y revolver para que tenga un aspecto uniforme</step>
+      <step order="6">Volver a enfriar durante al menos una hora</step>
+    </process>
+  </recipe>
+</cookbook>
