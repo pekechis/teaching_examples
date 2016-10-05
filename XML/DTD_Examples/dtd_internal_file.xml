@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE recordatorio [
+<!ELEMENT recordatorio (para,de,titulo,contenido,despedida?)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT despedida (#PCDATA)>
+]>
+<recordatorio>
+<para>Miguel</para>
+<de>Mamá</de>
+<titulo>Coge el bocadillo</titulo>
+<contenido>Cariño no te olvides el bocadillo cuando vayas al cole </contenido>
+</recordatorio>

@@ -1,0 +1,6 @@
+<!ELEMENT recordatorio (para,de,titulo,contenido,despedida?)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT despedida (#PCDATA)>
