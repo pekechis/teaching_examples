@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<route>
+    <name>C4</name>
+    <schedule>
+      <first>6:30</first>
+      <last>23:30</last>
+    </schedule>
+    <stops>
+      <stop order="1">
+        <address>
+          <street>Fray Luis Urbano</street>
+          <number>10</number>
+        </address>
+      </stop>
+      <stop order="2">
+        <address>
+          <street>Doctor Iranzo</street>
+          <number>15</number>
+        </address>
+      </stop>
+      <stop order="3">
+        <address>
+          <street>Rodrigo Rebolledo</street>
+          <number>3</number>
+        </address>
+      </stop>
+      <stop order="4">
+        <address>
+          <street>Coso</street>
+          <number>23</number>
+        </address>
+      </stop>
+      <stop order="5">
+        <address>
+          <street>Paseo Independencia</street>
+          <number>100</number>
+        </address>
+      </stop>
+    </stops>
+</route>
