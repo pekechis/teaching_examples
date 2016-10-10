@@ -2,8 +2,8 @@
 <route>
     <name>C4</name>
     <schedule>
-      <first>6:30</first>
-      <last>23:30</last>
+      <first>06:30:00</first>
+      <last>23:30:00</last>
     </schedule>
     <stops>
       <stop order="1">

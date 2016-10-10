@@ -4,22 +4,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name" />
-        <xs:element ref="schelude" />
+        <xs:element ref="schedule" />
         <xs:element ref="stops" />
       </xs:sequence>
-    </xs:completType>
+    </xs:complexType>
   </xs:element>
   <xs:element name="name" type="xs:string" />
   <xs:element name="schedule">
-    <xs:complextType>
+    <xs:complexType>
       <xs:sequence>
         <xs:element ref="first"/>
         <xs:element ref="last" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="first" type="xs:date" />
-  <xs:element name="last" type="xs:date" />
+  <xs:element name="first" type="xs:time" />
+  <xs:element name="last" type="xs:time" />
   <xs:element name="stops">
       <xs:complexType>
         <xs:sequence>
@@ -32,8 +32,8 @@
           <xs:sequence>
             <xs:element ref="address" />
           </xs:sequence>
+      <xs:attribute name="order" type="xs:integer" use="required"/>
       </xs:complexType>
-      <xs:attribute name="order" type="xs:integer" use="requiered"/>
   </xs:element>
   <xs:element name="address">
     <xs:complexType>
@@ -43,6 +43,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="street" type="xs:string">
-  <xs:element name="number" type="xs:integer">  
+  <xs:element name="street" type="xs:string"/>
+  <xs:element name="number" type="xs:integer"/>
 </xs:schema>
