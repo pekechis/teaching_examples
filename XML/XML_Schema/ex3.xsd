@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="cookbox">
+    <xs:element name="cookbook">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="recipe" minOccurs="1" maxOccurs="unbounded"/>
@@ -39,11 +39,14 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="name" type="xs:string"/>
     <xs:element name="quantity" type="xs:string"/>
-    <xs:element name="step" >
-        <xs:simpleType>
-            <xs:attribute name="order" type="xs:integer" use="required"/>
-        </xs:simpleType>
+    <xs:element name="step">
+      <xs:complexType>
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute name="order" type="xs:string" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
     </xs:element>
 </xs:schema>
