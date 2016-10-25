@@ -24,11 +24,11 @@
         $size=10;
 
         //Main Loop. Generates as many rows as needed
-        for ($i=1;$i<=$tam;$i++) {
+        for ($i=1;$i<=$size;$i++) {
             echo "<tr>";
             //Secondary Loop.Generates as many cells as needed
             //for echa of the rows
-            for ($j=1;$j<=$tam;$j++) {
+            for ($j=1;$j<=$size;$j++) {
               //Each cell contains its order number
               echo "<td>".(($i-1)*$size+$j)."</td>";
             }
@@ -36,7 +36,7 @@
         }
 
       ?>
-      
+
       </table>
   </body>
 </html>
