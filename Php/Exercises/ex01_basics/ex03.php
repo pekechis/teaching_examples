@@ -21,7 +21,7 @@
         $your_name="Juan Diego";
         //Echo prints the following the string into the file output
         //Using double quotes the vars are replaces with its values
-        echo "Hello $your_name";
+        echo "Hello ".$your_name;
       ?>
   </body>
 </html>

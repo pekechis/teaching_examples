@@ -16,7 +16,7 @@
   <body>
       <?php
         //Store the values into the two vars
-        $v1=77;
+        $v1=230;
         $v2=230;
 
         //Check which one in greater

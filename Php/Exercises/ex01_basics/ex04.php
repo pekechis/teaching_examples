@@ -22,7 +22,7 @@
 
         //Showing all the results
         // The operator . concatenates strings
-        echo $v1."+".$v2."=".round($v1+$v2)."<br>";
+        echo $v1."+".$v2."=".($v1+$v2)."<br>";
         echo $v1."-".$v2."=".round($v1-$v2)."<br>";
         echo $v1."*".$v2."=".round($v1*$v2)."<br>";
         echo $v1."/".$v2."=".round($v1/$v2)."<br>";

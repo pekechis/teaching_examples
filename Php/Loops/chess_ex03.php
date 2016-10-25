@@ -21,7 +21,7 @@
         <div id="main">
           <?php
               //SIZE OF THE CHESS BOARD
-              $tam=8;
+              $tam=4;
               for ($i=0;$i<$tam;$i++) {
                   echo "<div class=\"row\">";
                   //CREATING THE ROW

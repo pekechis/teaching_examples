@@ -24,7 +24,7 @@
         $day_of_month= intval($day_of_month);
 
         //Check which one in greater
-        if ($day_of_month>10) {
+        if ($day_of_month>20) {
           echo "OUT OF SERVICE";
         } else {
           echo "ACTIVE SERVICE";
