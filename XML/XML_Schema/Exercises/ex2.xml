@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="utf-8">
+<?xml version="1.0" encoding="utf-8" ?>
 <books>
   <book>
-      <title></title>
+      <title>A Semantic Web Primer</title>
       <authors>
-        <author></author>
-        <author></author>
+        <author>Antoniou, G.</author>
+        <author>F. var Harmelen</author>
       </authors>
-      <publisher></publisher>
-      <year></year>
+      <publisher>Cambridge, MA:Mit Press</publisher>
+      <year>2004</year>
   </book>
   <book>
-      <title></title>
+      <title>The Semantic Web: A Guide to the Future of XML</title>
       <authors>
-        <author></author>
-        <author></author>
+        <author>Daconts, M.C.</author>
+        <author>L.J. Orbst</author>
+        <author>K.T. Smith</author>
       </authors>
-      <publisher></publisher>
-      <year></year>
+      <publisher>New York:Wiley</publisher>
+      <year>2003</year>
   </book>
 </books>
