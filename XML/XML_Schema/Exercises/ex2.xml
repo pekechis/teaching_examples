@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8">
+<books>
+  <book>
+      <title></title>
+      <authors>
+        <author></author>
+        <author></author>
+      </authors>
+      <publisher></publisher>
+      <year></year>
+  </book>
+  <book>
+      <title></title>
+      <authors>
+        <author></author>
+        <author></author>
+      </authors>
+      <publisher></publisher>
+      <year></year>
+  </book>
+</books>
