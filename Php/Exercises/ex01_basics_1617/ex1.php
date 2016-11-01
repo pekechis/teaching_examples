@@ -18,7 +18,7 @@
 
     Date: November 2016
     Reference: http://www.php.net
-    Requires: Basic HTML knowledge // Php vars and
+    Requires: Basic HTML knowledge // Php vars and arithmetics operators
 -->
 <!DOCTYPE html>
 <html lang="en">
