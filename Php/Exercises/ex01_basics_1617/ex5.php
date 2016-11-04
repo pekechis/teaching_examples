@@ -36,19 +36,19 @@
         echo "<table>";
 
         //Main Loop. One Iteration per row
-        for ($i=0;$i<10;$i++) {
+        for ($i=0;$i<5;$i++) {
 
           //Opening the row
           if (($i%2)==0) {
             //Even Row
-            echo "<tr class='par'></td>";
+            echo "<tr class='par'>";
           } else {
             //Odd Row
-            echo "<tr class='impar'></td>";
+            echo "<tr class='impar'>";
           }
 
           //Inner Loop. One iteration per column
-          for ($j=0; $j<10;$j++) {
+          for ($j=0; $j<5;$j++) {
             echo "<td></td>";
           }
           //Closing the row

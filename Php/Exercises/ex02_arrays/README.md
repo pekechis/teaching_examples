@@ -16,8 +16,9 @@
 
   Then create an embedded PHP programa that writes a table where the each row contains the name and the last name of each of one the IDs. Like this.
 
-  | Name | LastName |
-  | Pepe | Perez    |
+  | Name       | LastName |
+  |------------|----------|
+  | Pepe       | Perez    |
 
 
 3. Given the following array (‘roberto’,’juan’,’marta’,’moria’,’martin’,’jorge’,’miriam’,’nahuel’,’mirta’) write an embedded PHP program that creates a new array with the elements of the first one that starts with "m". Review string related functions : http://php.net/manual/ref.strings.php

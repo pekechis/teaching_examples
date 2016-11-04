@@ -53,7 +53,7 @@
       } while ($counter>0);
 
       echo "<br>";
-      
+
       //For Loop Example
       for($counter=0;$counter<9;$counter++) {
         echo ($counter+1)." ";
@@ -89,7 +89,7 @@
           }
           echo "</li>";
       }
-      echo "</ul>";
+      echo "</ol>";
 
     ?>
   </body>
