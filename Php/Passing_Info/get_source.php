@@ -21,6 +21,6 @@
       <!-- ?username=Pepe&apellidos=Perez Is the Query
            where username and apellidos are the variables
            and Pepe and Perez are the values of the different variables -->
-      <a href="get_destination.php?name=Pepe&lastname=Perez">CLICK HERE</a>
+      <a href="get_destination.php?name=Pepe&lastname=Perez&edad=51">CLICK HERE</a>
   </body>
 </html>

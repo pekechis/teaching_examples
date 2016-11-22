@@ -32,7 +32,8 @@
           <span>Last Name:</span><input type="text" name="lastname" required><br>
           <span>Email:</span><input type="email" name="mail" required><br>
           <span>Date if Birth:</span><input type="date" name="date"><br>
-          <span>Sex: </span><input type="radio" name="sex" value="H">Male<input type="radio" name="sexo" value="M">Female<br>
+          <span>Sex: </span><input type="radio" name="sex" value="H">Male
+                            <input type="radio" name="sex" value="M">Female<br>
           <h3>Subjects</h3>
           <input type="checkbox" name="subjects[]" value="LM">MarkUp Languages<br>
           <input type="checkbox" name="subjects[]" value="GBD">Database Management<br>

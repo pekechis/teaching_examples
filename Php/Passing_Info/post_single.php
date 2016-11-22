@@ -28,6 +28,8 @@
       <!-- FIRST TIME. NO DATA IN THE POST (checking a required form field) -->
       <!-- So we must show the form -->
 
+
+
       <?php if (!isset($_POST["mail"])) : ?>
         <form method="post">
           <fieldset>
@@ -42,6 +44,7 @@
             <input type="checkbox" name="subjects[]" value="GBD">Database Management<br>
             <input type="checkbox" name="subjects[]" value="PAR">Computer Networks<br>
             <input type="checkbox" name="subjects[]" value="IAW">Web Apps<br>
+            <input type="file">
             <p><input type="submit" value="Send"></p>
           </fieldset>
         </form>

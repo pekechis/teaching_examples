@@ -2,8 +2,8 @@
     Author: Juan Diego Pérez @pekechis
     E-mail: contact@jdperez.es
     Description: Passing info using POST and HTML forms
-                 using the same file
-    Date: November 2015
+                 using the same file with database interaction
+    Date: November 2016
     Reference: http://www.w3schools.com/tags/tag_form.asp
                http://www.w3schools.com/tags/tag_input.asp
                http://php.net/manual/reserved.variables.post.php
@@ -28,7 +28,7 @@
       <!-- FIRST TIME. NO DATA IN THE POST (checking a required form field) -->
       <!-- So we must show the form -->
 
-      <?php 
+      <?php
 		if (!isset($_POST["cod"])) : ?>
         <form method="post">
           <fieldset>
@@ -43,10 +43,9 @@
 	  </fieldset>
         </form>
 
-      <!-- DATA IN $_POST['mail']. Coming from a form submit -->
       <?php else: ?>
 
-        <?php
+      <?php
             echo "<h3>Showing data coming from the form</h3>";
             var_dump($_POST);
 
@@ -59,22 +58,21 @@
 	        exit();
 	   }
 
-	   $codigo=$_POST['cod'];
-	   $consulta= "INSERT INTO CLIENTES VALUES('$codigo','".$_POST['id']."','".$_POST['lastname']."','".$_POST['name']."','".$_POST['address']."','".$_POST['phone']."')";
-	
-	   var_dump($consulta);
+  	   $codigo=$_POST['cod'];
+  	   $consulta= "INSERT INTO CLIENTES VALUES('$codigo','".$_POST['id']."','".$_POST['lastname']."','".$_POST['name']."','".$_POST['address']."','".$_POST['phone']."')";
 
-	   $result = $connection->query($consulta);
+  	   var_dump($consulta);
 
-	   if (!$result) {
- 		echo "Query Error";
-           } else {
-		echo "New client added";
-	   }
-		
-        ?>
+  	   $result = $connection->query($consulta);
+
+  	   if (!$result) {
+   		    echo "Query Error";
+       } else {
+  		     echo "New client added";
+  	   }
+
+     ?>
 
       <?php endif ?>
-
   </body>
 </html>

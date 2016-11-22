@@ -17,6 +17,8 @@
   </head>
   <body>
       <?php
+        var_dump($_GET);
+        var_dump($_POST);
         // $_GET is always set. We check if it contains anything
         // If $_GET is empty (does not contains anything)
        if (empty($_GET)) {
