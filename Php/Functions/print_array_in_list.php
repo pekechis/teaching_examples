@@ -35,7 +35,7 @@
         $data2=array("A" => 1,"B"=>2,"C"=>3,"D"=>4,"E"=>6);
 
         //Calling the function with one array
-        list_of_array($data);
+        list_of_array($data2);
 
       ?>
   </body>

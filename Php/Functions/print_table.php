@@ -38,7 +38,7 @@
           }
 
           //Function call with 5 and 10 values
-          print_table(5,10);
+          print_table(15,15);
 
       ?>
   </body>

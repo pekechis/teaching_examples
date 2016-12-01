@@ -37,7 +37,7 @@
         $data=array("HELLO","GOODBYE","SEE YOU LATER","F*** YOU");
 
 
-        if (contains($data,"HELLO")) {
+        if (contains($data,"HELLLO")) {
           //The array constains "HELLO"
           echo "YES";
         } else {
