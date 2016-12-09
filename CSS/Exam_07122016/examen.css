@@ -1,0 +1,89 @@
+* {
+	box-sizing: border-box;
+}
+
+#container {
+	width: 80%;
+	margin: 10px auto;
+}
+
+#sidebar {
+	width: 30%;
+	float:left;
+}
+
+#profile-img {
+	width: 70%;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#sidebar img {
+	width: 100%;
+}
+
+#sidebar li {
+	display: inline;
+	list-style: none;
+	font-size: 2em;	
+	border-bottom: 1px solid black;
+}
+
+#sidebar ul {
+	margin: 0px;
+	padding-left: 0px;
+	text-align: center;
+}
+
+#content {
+	width: 70%;
+	float:left;
+	border-left: 2px dashed black;
+}
+
+#texto div {
+	float: left;
+	width: 33%;
+	padding: 10px;	
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+	background-color: #CCCCCC;
+	border-radius: 10px;
+
+}
+
+#footer p {
+	margin: 0px;	
+}
+
+#slider {
+	width: 80%;
+	margin: 20px auto;
+	position: relative;
+
+}
+
+#slider img {
+	width: 100%;
+}
+
+#slider #right {
+	position: absolute;
+	font-size: 4em;
+	color: white;
+	left: 10px;
+	top: 40%;
+}
+
+#slider #left {
+	position: absolute;
+	font-size: 4em;
+	color: white;
+	right: 10px;
+	top: 40%;
+}
