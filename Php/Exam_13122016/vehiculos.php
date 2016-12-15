@@ -1,24 +1,15 @@
-<!--
-    Author: Juan Diego Pérez @pekechis
-    E-mail: contact@jdperez.es
-    Description: GETTING DATA FROM A MYSQL DATABASE
-    Date: November 2015
-    Reference: http://php.net/manual/mysqlinfo.api.choosing.php
-               http://php.net/manual/book.mysqli.php
-
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GETTING DATA FROM A MYSQL DATABASE</title>
+    <title>VEHICLES EX 14-12-2016</title>
   </head>
   <body>
     <?php
 
       //CREATING THE CONNECTION
-      $connection = new mysqli("localhost", "tf", "12345", "TalleresFaber");
+      $connection = new mysqli("localhost", "tf", "12345", "tf");
 
       //TESTING IF THE CONNECTION WAS RIGHT
       if ($connection->connect_errno) {
@@ -28,7 +19,9 @@
 
       //MAKING A SELECT QUERY
       /* Consultas de selección que devuelven un conjunto de resultados */
-      if ($result = $connection->query("SELECT * FROM CLIENTES;")) {
+        $query="SELECT matricula, marca,dni, nombre,apellidos
+                FROM clientes c JOIN vehiculos v on c.codcliente=v.codcliente";
+      if ($result = $connection->query($query)) {
 
           printf("<p>The select query returned %d rows.</p>", $result->num_rows);
 
@@ -38,12 +31,11 @@
           <table style="border:1px solid black">
           <thead>
             <tr>
-              <th>CodCliente</th>
+              <th>Matricula</th>
+              <th>Marca</th>
+              <th>DNI</th>
               <th>Nombre</th>
               <th>Apellidos</th>
-              <th>DNI</th>
-              <th>Direccion</th>
-              <th>Teléfono</th>
           </thead>
 
       <?php
@@ -53,12 +45,12 @@
           while($obj = $result->fetch_object()) {
               //PRINTING EACH ROW
               echo "<tr>";
-              echo "<td>".$obj->CodCliente."</td>";
-              echo "<td>".$obj->Nombre."</td>";
-              echo "<td>".$obj->Apellidos."</td>";
-              echo "<td>".$obj->DNI."</td>";
-              echo "<td>".$obj->Direccion."</td>";
-              echo "<td>".$obj->Telefono."</td>";
+              echo "<td>".$obj->matricula."</td>";
+              $marca=$obj->marca;
+              echo "<td><a href='marca.php?marca=$marca'>".$obj->marca."</a></td>";
+              $dni= $obj->dni;
+              echo "<td><a href='cliente.php?dni=$dni'>".$obj->dni."</a></td>";              echo "<td>".$obj->nombre."</td>";
+              echo "<td>".$obj->apellidos."</td>";
               echo "</tr>";
           }
 

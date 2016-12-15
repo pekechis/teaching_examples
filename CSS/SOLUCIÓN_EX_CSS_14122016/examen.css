@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 910px;
+  margin: 100px auto;
+  border: 5px solid black;
+  overflow-y: auto;
+}
+
+#profile {
+  width: 200px;
+  float: right;
+  text-align: center;
+}
+#profile img {
+  margin-top: 50px;
+}
+
+#profile p {
+  width: 100px;
+  float:left;
+  text-align:left;
+  padding: 5px;
+}
+
+#profile  img {
+  width: 150px;
+}
+img {
+  width: 150px;
+  height: 150px;
+}
+
+#content {
+  width: 700px;
+  float: right;
+}
+
+#content h1 {
+  border: 1px solid black;
+  width: 500px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+#gallery {
+  width: 500px;
+  margin: 0px auto;
+}
+
+#gallery img {
+  width: 32%;
+}
