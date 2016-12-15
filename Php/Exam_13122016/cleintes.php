@@ -19,8 +19,7 @@
 
       //MAKING A SELECT QUERY
       /* Consultas de selección que devuelven un conjunto de resultados */
-        $query="SELECT matricula, marca,dni, nombre,apellidos
-                FROM clientes c JOIN vehiculos v on c.codcliente=v.codcliente";
+        $query="SELECT * FROM clientes";
       if ($result = $connection->query($query)) {
 
           printf("<p>The select query returned %d rows.</p>", $result->num_rows);
@@ -31,11 +30,12 @@
           <table style="border:1px solid black">
           <thead>
             <tr>
-              <th>Matricula</th>
-              <th>Marca</th>
+              <th>Codcliente</th>
               <th>DNI</th>
               <th>Nombre</th>
               <th>Apellidos</th>
+              <th>Direccion</th>
+              <th>Teléfono</th>
           </thead>
 
       <?php
@@ -45,12 +45,13 @@
           while($obj = $result->fetch_object()) {
               //PRINTING EACH ROW
               echo "<tr>";
-              echo "<td>".$obj->matricula."</td>";
-              $marca=$obj->marca;
-              echo "<td><a href='marca.php?marca=$marca'>".$obj->marca."</a></td>";
-              $dni= $obj->dni;
-              echo "<td><a href='cliente.php?dni=$dni'>".$obj->d."</a></td>";              echo "<td>".$obj->nombre."</td>";
-              echo "<td>".$obj->apellidos."</td>";
+              $codigo=$obj->CodCliente;
+              echo "<td><a href='editarcliente.php?id=$codigo'>".$obj->CodCliente."</a></td>";
+              echo "<td>".$obj->Nombre."</td>";
+              echo "<td>".$obj->Apellidos."</td>";
+              echo "<td>".$obj->DNI."</td>";
+              echo "<td>".$obj->Direccion."</td>";
+              echo "<td>".$obj->Telefono."</td>";
               echo "</tr>";
           }
 
