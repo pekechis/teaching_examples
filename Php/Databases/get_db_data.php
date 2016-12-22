@@ -9,7 +9,7 @@
     <?php
 
       //CREATING THE CONNECTION
-      $connection = new mysqli("localhost", "tf", "12345", "tf");
+      $connection = new mysqli("localhost", "tf", "123456", "tf");
       $connection->set_charset("uft8");
 
       //TESTING IF THE CONNECTION WAS RIGHT

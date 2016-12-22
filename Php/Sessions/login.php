@@ -16,7 +16,7 @@
         if (isset($_POST["user"])) {
 
           //CREATING THE CONNECTION
-          $connection = new mysqli("localhost", "tf", "12345", "usuarios");
+          $connection = new mysqli("localhost", "tf", "123456", "tf");
 
           //TESTING IF THE CONNECTION WAS RIGHT
           if ($connection->connect_errno) {
@@ -26,7 +26,7 @@
 
           //MAKING A SELECT QUERY
           //Password coded with md5 at the database. Look for better options
-          $consulta="select * from usuarios where
+          $consulta="select * from usuario where
           username='".$_POST["user"]."' and password=md5('".$_POST["password"]."');";
 
           //Test if the query was correct
