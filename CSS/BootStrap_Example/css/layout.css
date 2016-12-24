@@ -1,0 +1,72 @@
+
+#apple {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#imac {
+	width: 80%;
+}
+
+#header  img {
+	width: 100%;
+}
+
+.testimonial {
+	background-color: black;
+	border-radius: 10px;
+	font-style: italic;
+	padding: 10px;
+}
+
+.author {
+	color: orange;
+	text-align: right;
+	margin: 10px;
+}
+
+#leftcontent img {
+	width:70%;
+	margin-left:35%;
+	margin-top: 20%;
+}
+
+#content, #footer {
+	background-color: #1f1e19
+}
+
+#header, #main {
+	background-color: #e95c41;
+}
+
+#content h5 {
+	color: orange;
+}
+
+#content h3, #main h3 {
+	color: white;
+}
+
+#content, #footer {
+	color: #555555;
+}
+#content {
+	border-bottom: 1px dashed #555555;
+}
+
+#footer {
+	padding-top: 10px;
+}
+
+#header {
+	border-bottom: 1px dashed white;
+}
+
+#buy {
+	border-top: 1px dashed white;
+	border-bottom: 1px dashed white;
+}
+
+#socialicons {
+	margin-top: 50px;
+}
