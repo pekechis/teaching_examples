@@ -42,6 +42,9 @@
 #content h5 {
 	color: orange;
 }
+div {
+	overflow-y: auto;
+}
 
 #content h3, #main h3 {
 	color: white;
@@ -69,4 +72,13 @@
 
 #socialicons {
 	margin-top: 50px;
+}
+
+.negro {
+	background-color: black;
+	color: white;
+}
+
+#newsletter div {
+	padding-bottom: 20px;
 }
