@@ -109,7 +109,7 @@
                   $name = $_POST['name'];
 
                   $query="INSERT INTO product VALUES(null,'$code','$name','$target_file','$description')";
-                  echo $query;
+                  //echo $query;
 
                   // if ($result = $connection->query($query)) {
                   //
