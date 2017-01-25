@@ -1,4 +1,4 @@
-<?php
+  <?php
 
   //Open the session
   session_start();
@@ -14,7 +14,7 @@
   if (isset($_GET["id"])) {
 
     //CREATING THE CONNECTION
-    $connection = new mysqli("localhost", "tf", "12345", "usuarios");
+    $connection = new mysqli("localhost", "tf", "123456", "tf");
 
     //TESTING IF THE CONNECTION WAS RIGHT
     if ($connection->connect_errno) {
@@ -23,7 +23,7 @@
     }
 
     //BUILDING THE DELETE  QUERY
-    $query = $connection->prepare("DELETE FROM usuarios
+    $query = $connection->prepare("DELETE FROM usuario
       WHERE id=?");
 
     //Binding the ? to the post values

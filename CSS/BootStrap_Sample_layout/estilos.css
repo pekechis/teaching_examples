@@ -1,0 +1,31 @@
+div {
+  height: 100px;
+}
+
+div#cab, #c {
+  background-color: red;
+}
+
+div#pie, #a {
+  background-color: grey;
+}
+
+div#content, div#sidebar, div#main {
+  height: 400px;
+}
+
+div#sidebar, #b {
+  background-color: yellow;
+}
+
+div#main {
+  background-color: green;
+}
+
+div#main .row div {
+  height: 200px;
+}
+
+div#title {
+  background-color: brown;
+}

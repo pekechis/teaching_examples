@@ -42,13 +42,15 @@
                   <textarea rows="5" name="description" class="form-control">
                   </textarea>
                 </div>
-                <input class="btn btn-default" type="submit" value="Send" />
+                <input class="btn btn-primary" type="submit" value="Send" />
               </form>
             <div>
 
           <?php else: ?>
 
           <?php
+
+                var_dump($_FILES);
 
                 //Temp file. Where the uploaded file is stored temporary
                 $tmp_file = $_FILES['image']['tmp_name'];
@@ -84,6 +86,7 @@
 
                 if ($valid) {
 
+                  var_dump($target_file);
                   //Put the file in its place
                   move_uploaded_file($tmp_file, $target_file);
 

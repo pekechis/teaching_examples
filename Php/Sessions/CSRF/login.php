@@ -24,7 +24,7 @@
         if (isset($_POST["user"])) {
 
           //CREATING THE CONNECTION
-          $connection = new mysqli("localhost", "tf", "12345", "usuarios");
+          $connection = new mysqli("127.0.0.1","tf", "123456", "tf");
 
           //TESTING IF THE CONNECTION WAS RIGHT
           if ($connection->connect_errno) {
@@ -38,7 +38,7 @@
           //SHOWING THE UNSAFE VERSION -- SQL INJECTION POSSIBLE
           //$consulta="select * from usuarios where
           //username='".$_POST["user"]."' and password=md5('".$_POST["password"]."');";
-          $query = $connection->prepare("SELECT * FROM usuarios
+          $query = $connection->prepare("SELECT * FROM usuario
             WHERE username=? AND password=md5(?)");
 
           //Binding the ? to the post values
