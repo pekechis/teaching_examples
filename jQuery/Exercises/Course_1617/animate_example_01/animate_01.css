@@ -1,0 +1,23 @@
+#container {
+  width: 800px;
+  height: 300px;
+  margin: 0px auto;
+  position: relative;
+  border: 1px solid black;
+}
+
+#movil {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 375px;
+  top: 125px;
+}
+
+#barra {
+  width: 400px;
+  background-color: green;
+  height: 100px;
+  margin-top: 30px;
+}

@@ -1,0 +1,82 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./animate_01.css">
+</head>
+<body>
+
+	<h1>Animate Example 01</h1>
+
+  <p><input type="button" value="<">
+	<input type="button" value=">">
+	<input type="button" value="^">
+	<input type="button" value="v"></p>
+
+	<div id="container">
+		<div id="movil">
+		</div>
+	</div>
+
+	<div id="barra">
+	</div>
+	<p><input type="button" value="Crece">
+	<input type="button" value="Encoge"></p>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("input[value='<']").on("click",function() {
+				$("div#movil").animate({
+					left : "-=50px"
+				},1000);
+			});
+
+			$("input[value='>']").on("click",function() {
+				$("div#movil").animate({
+					left : "+=50px"
+				},1000);
+			});
+
+			$("input[value='^']").on("click",function() {
+				$("div#movil").animate({
+					top : "-=50px"
+				},1000);
+			});
+
+			$("input[value='v']").on("click",function() {
+				$("div#movil").animate({
+					top : "+=50px"
+				},1000);
+			});
+
+			$("input[value='Crece']").on("click",function() {
+				$("div#barra").animate({
+					width : "+=50px"
+				},1000);
+			});
+
+			$("input[value='Encoge']").on("click",function() {
+				$("div#barra").animate({
+					width : "-=50px"
+				},1000);
+			});
+
+
+	  });
+	</script>
+
+</body>
+</html>
