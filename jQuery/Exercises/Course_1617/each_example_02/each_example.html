@@ -1,0 +1,68 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+  <link rel="stylesheet" href="./each_example.css">
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>EACH EXAMPLE 02</h1>
+
+	<table>
+		<thead>
+      <th>DNI</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Address</th>
+		</thead>
+		<tbody>
+			<tr><td>22222222X</td><td>Rosa</td><td>Pérez</td><td>Aquí</td></tr>
+			<tr><td>33333333Y</td><td>Manuel</td><td>Pérez</td><td>Allí</td></tr>
+			<tr><td>44444444Z</td><td>Anacleto</td><td>Pérez</td><td>Más allá</td></tr>
+			<tr><td>66666666J</td><td>Remigio</td><td>Pérez</td><td>Lejos</td></tr>
+			<tr><td>77777777H</td><td>Soleda</td><td>Pérez</td><td>Más lejos</td></tr>
+
+		</tbody>
+	</table>
+
+	<form>
+		<p>
+		<label>DNI a buscar</label>
+		<input type="text"></p>
+		<input type="button" value="Buscar"/>
+	</form>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+				$("input[value='Buscar']").click(function() {
+
+						$("tbody tr td:first-child").each( function(index) {
+
+							var valor = $("input[type='text']").val();
+
+							if ($(this).text()==valor) {
+                $("tr").removeClass("encontrado");
+								$(this).parent().addClass("encontrado");
+							}
+
+						});
+				});
+
+	  });
+	</script>
+
+</body>
+</html>
