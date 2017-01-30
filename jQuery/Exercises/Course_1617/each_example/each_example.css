@@ -1,0 +1,14 @@
+.suspenso {
+  background-color: red;
+  color: white;
+}
+
+.aprobado {
+  background-color: yellow;
+  color: black;
+}
+
+.sobresaliente {
+  background-color: green;
+  color: white;
+}

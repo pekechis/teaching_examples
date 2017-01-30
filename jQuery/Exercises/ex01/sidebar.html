@@ -1,4 +1,4 @@
-xample<!--
+<!--
     Author: Juan Diego Pérez @pekechis
     E-mail: contact@jdperez.es
     Description: Simple Sliding Side Bar using jQuery
@@ -40,9 +40,13 @@ xample<!--
 
               //Click handler for closing arrow
               $("#close").click(function() {
-                $("#content").hide();
+                //$("#content").hide();
+                $(this).parent().siblings().hide();
                 $(this).hide();
                 $("#open").show();
+                / /$(this).next().show();
+                //$(this).siblings().show();
+                //$(this).nextAll().show();
               });
 
               $("#open").click(function() {

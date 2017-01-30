@@ -1,0 +1,67 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+  <link rel="stylesheet" href="./each_example.css">
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>EACH EXAMPLE</h1>
+
+	<table>
+		<thead>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Grade</th>
+		</thead>
+		<tbody>
+			<tr><td>Pepe</td><td>Pérez</td><td>4</td></tr>
+			<tr><td>Manuel</td><td>Pérez</td><td>3</td></tr>
+			<tr><td>Rosa</td><td>Pérez</td><td>6</td></tr>
+			<tr><td>Ana</td><td>Pérez</td><td>7</td></tr>
+			<tr><td>Jesús</td><td>Pérez</td><td>9</td></tr>
+			<tr><td>Eva</td><td>Pérez</td><td>3</td></tr>
+		</tbody>
+	</table>
+
+	<form>
+		<input type="button" value="comprobar"/>
+	</form>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+				$("input[value='comprobar']").click(function() {
+
+						$("tbody tr td:last-child").each( function(index) {
+
+              var valor=parseInt($(this).text());
+
+							if (valor<5) {
+								$(this).addClass("suspenso");
+							} else if (valor>=5 && valor<=8) {
+                $(this).addClass("aprobado");
+							} else {
+                $(this).addClass("sobresaliente");
+							}
+
+						});
+				});
+
+	  });
+	</script>
+
+</body>
+</html>
