@@ -1,0 +1,38 @@
+
+#container {
+  width: 600px;
+  margin: 50px auto;
+  background-color: #AAAAAA;
+  border-radius: 20px;
+
+}
+
+.sec_header {
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.sec_header img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.sec_header h1 {
+  display: inline;
+  margin-left: 10px;
+}
+
+.sec_content div {
+  float:left;
+  overflow-y: auto;
+}
+
+.cont_image {
+  width: 40%;
+}
+
+.cont_text {
+  width: 60%;
+  padding: 20px;
+}
