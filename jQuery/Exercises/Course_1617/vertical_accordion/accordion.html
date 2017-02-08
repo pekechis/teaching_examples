@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="./accordion.css">
 </head>
 <body>
-
 	<div id="container">
 		<div id="accordion">
 			<section>
@@ -26,7 +25,26 @@
 				</div>
 				<div class="sec_content">
 					<div class="cont_image">
-						<img src="" />
+						<img src="img/falcon.jpg" />
+					</div>
+					<div class="cont_text" >
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+							 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							 sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</	div>
+				</div>
+			</section>
+			<section>
+				<div class="sec_header">
+					<img src="https://cdn2.iconfinder.com/data/icons/rounded-functions-1/154/arrow-circle-direction-down-512.png" />
+					<h1>SECTION 2</h1>
+				</div>
+				<div class="sec_content">
+					<div class="cont_image">
+						<img src="img/falcon.jpg" />
 					</div>
 					<div class="cont_text" >
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -41,11 +59,11 @@
 			<section>
 				<div class="sec_header">
 					<img src="https://cdn2.iconfinder.com/data/icons/rounded-functions-1/154/arrow-circle-direction-down-512.png" />
-					<h1>SECTION 1</h1>
+					<h1>SECTION 3</h1>
 				</div>
 				<div class="sec_content">
 					<div class="cont_image">
-						<img src="" />
+						<img src="img/falcon.jpg" />
 					</div>
 					<div class="cont_text" >
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -60,11 +78,11 @@
 			<section>
 				<div class="sec_header">
 					<img src="https://cdn2.iconfinder.com/data/icons/rounded-functions-1/154/arrow-circle-direction-down-512.png" />
-					<h1>SECTION 1</h1>
+					<h1>SECTION 4</h1>
 				</div>
 				<div class="sec_content">
 					<div class="cont_image">
-						<img src="" />
+						<img src="img/falcon.jpg" />
 					</div>
 					<div class="cont_text" >
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -79,30 +97,11 @@
 			<section>
 				<div class="sec_header">
 					<img src="https://cdn2.iconfinder.com/data/icons/rounded-functions-1/154/arrow-circle-direction-down-512.png" />
-					<h1>SECTION 1</h1>
+					<h1>SECTION 5</h1>
 				</div>
 				<div class="sec_content">
 					<div class="cont_image">
-						<img src="" />
-					</div>
-					<div class="cont_text" >
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-							 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							 sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="sec_header">
-					<img src="https://cdn2.iconfinder.com/data/icons/rounded-functions-1/154/arrow-circle-direction-down-512.png" />
-					<h1>SECTION 1</h1>
-				</div>
-				<div class="sec_content">
-					<div class="cont_image">
-						<img src="" />
+						<img src="img/falcon.jpg" />
 					</div>
 					<div class="cont_text" >
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -122,7 +121,23 @@
 	  //Function executed when the HTML document is Ready (full loaded)
 	  $(function() {
 
+			 //Hide all the content
+			 $("#container > div > section > div:nth-child(2)").hide();
 
+			 //Click handler for the section header
+			 $("#container > div > section > div:nth-child(1)").click(function() {
+
+         //Animate the next() child (the sec_content)
+				 $(this).next().animate({
+										 height: "toggle"
+				 },500);
+
+         //Stop any unfinished animation and hide all the
+				 //others sec_content elements
+				 $(this).parent().siblings().children("div:nth-child(2)").stop().hide();
+
+
+			 });
 
 	  });
 	</script>

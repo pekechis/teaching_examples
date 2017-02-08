@@ -1,10 +1,20 @@
 
+div, section {
+  box-sizing: border-box;
+}
+
 #container {
   width: 600px;
   margin: 50px auto;
   background-color: #AAAAAA;
-  border-radius: 20px;
+  border-radius: 10px;
+  border: 1px solid #AAAAAA;
+  overflow-y: auto;
 
+}
+
+#accordion {
+  overflow-y: auto;
 }
 
 .sec_header {
@@ -23,13 +33,24 @@
   margin-left: 10px;
 }
 
+.sec_content {
+  background-color: #FFFFFF;
+  height: 250px;
+}
 .sec_content div {
   float:left;
   overflow-y: auto;
+
 }
 
 .cont_image {
   width: 40%;
+  text-align: center;
+}
+
+.cont_image img {
+  width: 80%;
+  margin-top: 40px;
 }
 
 .cont_text {
