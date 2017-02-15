@@ -1,0 +1,16 @@
+ * {
+  box-sizing: border-box;
+}
+
+div#container {
+  width: 600px;
+  margin: 20px auto;
+}
+
+div#container > nav > div {
+  float: left;
+  width: 25%;
+  padding-left: 30px;
+  height: 50px;
+  background-color: #AAAAAA;
+}

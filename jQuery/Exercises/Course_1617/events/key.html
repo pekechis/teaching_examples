@@ -1,0 +1,74 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Capturing Keyboard Events with jQuery
+    Date: February 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capturing Keyboard Events with jQuery</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles_key.css">
+</head>
+<body>
+
+
+	<div id="container">
+		<div id="square">
+		</div>
+	</div>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+				$("body").keypress(function(event) {
+
+					var tecla = event	.which;
+
+					//Get the current position
+					var left = parseInt($("#square").css("left"));
+					var top = parseInt($("#square").css("top"));
+
+
+           //LEFT z code 122
+					if (tecla == 122 && left > 0) {
+						$("#square").animate({
+							left : "-=10px"
+						},200);
+					}
+
+          //UP s code 115
+					if (tecla == 115 && top > 0) {
+						$("#square").animate({
+							top : "-=10px"
+						},200);
+					}
+
+          //DOWN x code 120
+					if (tecla == 120 && top < 365) {
+						$("#square").animate({
+							top : "+=10px"
+						},200);
+					}
+
+					//RIGHT c code 99
+					if (tecla == 99 && left < 570) {
+						$("#square").animate({
+							left : "+=10px"
+						},200);
+					}
+
+				});
+
+	  });
+	</script>
+
+</body>
+</html>

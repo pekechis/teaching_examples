@@ -1,0 +1,36 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Capturing Mouse Events with jQuery
+    Date: February 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capturing Mouse Events with jQuery</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+	<h1>Pos X:   Pos Y:</h1>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			 $("*").mousemove(function(event) {
+
+				 	$("h1").text("Pos X:"+event.pageX+" Pos Y:"+event.pageY);
+			 });
+
+
+	  });
+	</script>
+
+</body>
+</html>

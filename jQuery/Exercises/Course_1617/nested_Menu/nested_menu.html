@@ -1,0 +1,56 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Three Level Nested Menu with nav / div and jQuery
+    Date: February 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested Menu with nav and divs</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+	<h1>Nested Menu with nav and divs</h1>
+	<div id="container">
+		<nav>
+			<div><h1>Section 1</h1>
+				<nav>
+					<div>Section 1.1</div>
+					<div>Section 1.2
+						<nav>
+							<div>Section 1.2.1</div>
+							<div>Section 1.2.2</div>
+							<div>Section 1.2.3</div>
+						</nav>
+					</div>
+					<div>Section 1.3</div>
+					<div>Section 1.4	</div>
+				</nav>
+			</div>
+			<div><h1>Section 2</h1>
+			</div>
+			<div><h1>Section 3</h1>
+			</div>
+			<div><h1>Section 4</h1>
+			</div>
+		</nav>
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+
+
+	  });
+	</script>
+
+</body>
+</html>
