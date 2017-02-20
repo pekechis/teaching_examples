@@ -9,4 +9,4 @@ A simple three level menu using div and nav tag.
 * The third level is another horizontal menu
 
 
-![Nested Menu Image](img/nested_menu.png)
+![Nested Menu Image](img/nested_menus.png)
