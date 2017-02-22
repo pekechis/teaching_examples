@@ -40,14 +40,21 @@
 			//At the beginning only right arrow is enabled
 			$("#izq").hide();
 
+      //Handler for moving to the previous image
 			$("#izq").click(function () {
 
+          //Is there any previous image?
 					if ($(".current").prev(".imagen").length!=0)  {
+              //Change the current image to the prev, make the new appear and the previous current
+						  //disappear
 							$(".current").removeClass("current").animate({"opacity": 0},500).
 							prev(".imagen").addClass("current").animate({"opacity": 1},500);
+
+							//As I have moved left now I can show the left arrow no matter what
 							$("#dcha").show();
 					}
 
+					//Make the left arrow disappear if I'm the first one (no prev)
 					if ($(".current").prev(".imagen").length==0) {
 						$("#izq").hide();
 					}
@@ -56,13 +63,21 @@
 
 			});
 
+			//Handler for moving to the next image
 			$("#dcha").click(function () {
+
+				//Is there any image left?
 				if ($(".current").next(".imagen").length!=0)  {
+					//Change the current image to the prev, make the new appear and the previous current
+					//disappear
 					$(".current").removeClass("current").animate({"opacity": 0},500).
 					next(".imagen").addClass("current").animate({"opacity" : 1},500);
+
+					//As I have moved rught now I can show the right arrow no matter what
 					$("#izq").show();
 				}
 
+				//Make the right arrow disappear if I'm the last one (no next)
 				if ($(".current").next(".imagen").length==0) {
 					$("#dcha").hide();
 				}
