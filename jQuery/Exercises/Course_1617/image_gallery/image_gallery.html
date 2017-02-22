@@ -1,0 +1,78 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Simple Image Gallery with jQuery
+    Date: February 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Image Galery with jQuery</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/styles.css"
+
+</head>
+<body>
+
+	<h1>Simple Image Galery with jQuery</h1>
+
+	<div id="container">
+		<img class="imagen current" src="./img/img1.jpg" >
+		<img class="imagen" src="./img/img2.jpg" >
+		<img class="imagen" src="./img/img3.jpg" >
+		<img class="imagen" src="./img/img4.jpg" >
+		<img class="arrow" id="izq" src="./img/arrow-left.png" >
+		<img class="arrow" id="dcha" src="./img/arrow-right.png" >
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+      //Only the first imagen will be shown
+			$(".imagen").css("opacity",0);
+			$(".current").css("opacity",1);
+
+			//At the beginning only right arrow is enabled
+			$("#izq").hide();
+
+			$("#izq").click(function () {
+
+					if ($(".current").prev(".imagen").length!=0)  {
+							$(".current").removeClass("current").animate({"opacity": 0},500).
+							prev(".imagen").addClass("current").animate({"opacity": 1},500);
+							$("#dcha").show();
+					}
+
+					if ($(".current").prev(".imagen").length==0) {
+						$("#izq").hide();
+					}
+
+
+
+			});
+
+			$("#dcha").click(function () {
+				if ($(".current").next(".imagen").length!=0)  {
+					$(".current").removeClass("current").animate({"opacity": 0},500).
+					next(".imagen").addClass("current").animate({"opacity" : 1},500);
+					$("#izq").show();
+				}
+
+				if ($(".current").next(".imagen").length==0) {
+					$("#dcha").hide();
+				}
+
+			});
+
+
+
+	  });
+	</script>
+
+</body>
+</html>
