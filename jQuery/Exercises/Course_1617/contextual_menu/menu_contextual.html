@@ -1,0 +1,56 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Contextual Menu
+    Date: March 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contextual Menu</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css"
+</head>
+<body>
+
+	<h1>Contextual Menu</h1>
+
+	<div id="main">
+
+	</div>
+
+	<ul>
+		<li>Opción 1</li>
+		<li>Opción 2</li>
+		<li>Opción 3</li>
+		<li>Opción 4</li>
+	</ul>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("ul").hide();
+
+			$("#main").click(function(event) {
+				event.preventDefault;
+				if (event.which == 1 ) {
+						$("ul").toggle();
+						$("ul").css({
+							"left" : event.pageX,
+							"top" : event.pageY
+						})
+				}
+
+			});
+
+
+	  });
+	</script>
+
+</body>
+</html>

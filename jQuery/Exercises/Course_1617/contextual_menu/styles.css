@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+#main {
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid red;
+}
+
+ul {
+  background-color: #AAAAAA;
+  color: white;
+  font-weight: bold;
+  list-style: none;
+  width: 100px;
+  padding-left: 0px;
+  position: absolute;
+}
+
+ul li {
+  padding-left: 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
