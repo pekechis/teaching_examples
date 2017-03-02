@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.section_header {
+  background-color: green;
+  color: white;
+}
+
+.section_content {
+  height: 400px;
+  background-color: grey;
+}
+
+h1 {
+  margin: 0px;
+  text-align: center;
+  font-size: 4em;
+}
+
+#menu div {
+  float: left;
+  width: 20%;
+  font-size: 2em;
+  background-color: #AAAAAA;
+  padding: 20px;
+}

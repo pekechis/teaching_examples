@@ -1,0 +1,85 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Scrolling using jQuery
+    Date: March 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrollin Using jQuery</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div id="main">
+		<header>
+			<div id="menu">
+				<div>Sección 1</div>
+				<div>Sección 2</div>
+				<div>Sección 3</div>
+				<div>Sección 4</div>
+				<div>Sección 5</div>
+			</div>
+		</header>
+		<section>
+			<div class="section_header">
+				<h1>SECTION 1</h1>
+			</div>
+			<div class="section_content">
+			</div>
+		</section>
+		<section>
+			<div class="section_header">
+				<h1>SECTION 2</h1>
+			</div>
+			<div class="section_content">
+			</div>
+		</section>
+		<section>
+			<div class="section_header">
+				<h1>SECTION 3</h1>
+			</div>
+			<div class="section_content">
+			</div>
+		</section>
+		<section>
+			<div class="section_header">
+				<h1>SECTION 4</h1>
+			</div>
+			<div class="section_content">
+			</div>
+		</section>
+		<section>
+			<div class="section_header">
+				<h1>SECTION 5</h1>
+			</div>
+			<div class="section_content">
+			</div>
+		</section>
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			 $("#menu div").click(function(event) {
+
+				 var position = $(this).index();
+
+				 $('body').animate({
+			 	 			scrollTop: $("section").eq(position).offset().top
+	 				}, 2000);
+			 });
+
+
+	  });
+	</script>
+
+</body>
+</html>
