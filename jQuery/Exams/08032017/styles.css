@@ -1,0 +1,90 @@
+
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 70%;
+  margin: 50px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#images {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+#images img {
+  width: 50%;
+  height: 50%;
+}
+
+#frame {
+  float: left;
+  width: 80%;
+}
+
+#picture {
+  float: left;
+  width: 70%;
+  border: 10px solid black;
+  height: 400px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#picture img {
+  width: 100px;
+  height: 100px;
+  border: 10px solid black;
+  margin: 150px;
+}
+
+#zoom {
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+
+#zoom img {
+  width: 60%;
+}
+
+#colors {
+  height: 100px;
+  clear: both;
+}
+#colors div {
+  float: left;
+  width: 15%;
+  height: 80%;
+  margin: 5px;
+}
+
+#rojo {
+  background-color: red;
+}
+
+#azul {
+  background-color: blue;
+}
+
+#amarillo {
+  background-color: yellow;
+}
+
+#negro {
+  background-color: black;
+}
+
+#rosa {
+  background-color: pink;
+}
+
+#verde {
+  background-color: green;
+}
