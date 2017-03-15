@@ -1,0 +1,25 @@
+
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 70%;
+  margin: 50px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#main > div  h1 {
+  text-align: left;
+}
+
+#main > div {
+  float: left;
+  width: 30%;
+  height: 600px;
+  padding: 10px;
+  border-left: 1px solid black;
+}
