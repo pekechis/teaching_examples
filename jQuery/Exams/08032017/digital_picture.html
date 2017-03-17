@@ -50,6 +50,53 @@
 	  $(function() {
 
 
+				$("#images img").click(function(event) {
+
+					 $("#picture img").attr("src",$(this).attr("src"));
+				});
+
+				$("#colors div").click(function(event) {
+
+						var color = $(this).css("background-color");
+
+						$("#picture").css("border-color",color);
+						$("#picture img").css("border-color",color);
+
+				});
+
+				$("#zoom img:nth-child(1)").click(function() {
+
+					var currX = $("#picture img").width();
+					var currY = $("#picture img").height();
+					var contX = $("#picture").width();
+					var contY = $("#picture").height();
+					var marg = parseInt($("#picture img").css("margin"));
+
+					//Check that the image doesn't overflow the frame
+					if ( (currX+marg+25 < contX) && (currY+marg+25 < contY) ){
+						$("#picture img").animate({
+						 width : "+=25px",
+						 height : "+=25px",
+						 margin : "-=12px",
+					 },500);
+					}
+
+				});
+
+				$("#zoom img:nth-child(2)").click(function() {
+
+						var tamX = $("#picture img").width();
+						var tamY = $("#picture img").height();
+
+						//Don't want the picture to disappear
+						if (tamX>35 && tamY> 35) {
+							$("#picture img").animate({
+								 width : "-=25px",
+								 height : "-=25px",
+								 margin : "+=12px"
+							 },500);
+						}
+				});
 
 	  });
 	</script>
