@@ -1,0 +1,18 @@
+#container {
+  width: 60%;
+  margin: 100px auto;
+}
+
+#pulse {
+  border-radius: 50%;
+  margin: 0px auto;
+  animation: pulse 5s ease-in infinite;
+}
+
+@keyframes pulse {
+  0% {width: 100px; height: 100px;background-color: red}
+  25% {width: 200px; height: 200px;background-color: yellow}
+  50% {width: 50px; height: 50px;background-color: green}
+  75% {width: 300px; height: 300px;background-color: orange}
+  100% {width: 100px; height: 100px;background-color: red}
+}
