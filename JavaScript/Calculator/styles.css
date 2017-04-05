@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 70%;
+  margin: 10px auto;
+}
+
+#numbers, #operations {
+  float: left;
+  width: 50%;
+}
+
+#result {
+  clear: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type='button'] {
+  width: 100%;
+  font-size: 2em;
+}

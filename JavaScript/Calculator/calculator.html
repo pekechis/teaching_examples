@@ -1,0 +1,84 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Simple javaScript y jQuery calculator
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+	<h1>Calculator</h1>
+
+	<div id="main">
+		<div id="numbers">
+			<p>
+				<label>X</label>
+				<input id="x" type="number" />
+			</p>
+			<p>
+				<label>Y</label>
+				<input id="y" type="number" />
+			</p>
+		</div>
+		<div id="operations">
+			<p>
+				<input type="button" value="+" />
+			</p>
+			<p>
+				<input type="button" value="-" />
+			</p>
+			<p>
+				<input type="button" value="*" />
+			</p>
+			<p>
+				<input type="button" value="/" />
+			</p>
+		</div>
+		<div id="result">
+			<h2>El resultado es </h2>
+		</div>
+	</div>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("input[type='button']").click(function(event) {
+				console.log("CLICK");
+				var x = parseInt($("#x").val());
+				var y = parseInt($("#y").val());
+				var op = $(this).val();
+        var resultado;
+
+				if (op=="+") {
+					resultado = x+y;
+				} else if (op=="-") {
+					resultado = x-y;
+				} else if (op=="*") {
+					resultado = x*y;
+				} else if (op=="/") {
+					resultado = x/y;
+				}
+
+				$("h2").html("El resultado es "+resultado);
+
+			});
+
+
+
+	  });
+	</script>
+
+</body>
+</html>
