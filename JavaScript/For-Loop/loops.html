@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href=" ">
+  </head>
+  <body>
+      <div id="resultado">
+      </div>
+      <script type="text/javascript">
+        var vector = ["A","B","C","D","E"];
+        var v2 = [1,2,3,4,5,6,7,8,9];
+
+        document.getElementById("resultado").innerHTML="<ul>";
+
+        for (i=0;i<vector.length;i++) {
+          document.getElementById("resultado").innerHTML+="<li>"+ vector[i]+"</li>";
+        }
+        document.getElementById("resultado").innerHTML+="</ul>";
+
+        document.getElementById("resultado").innerHTML+="<ul>";
+
+        var contador=0;
+        while (contador<v2.length) {
+          document.getElementById("resultado").innerHTML+="<li>"+ v2[contador]+"</li>";
+          contador++; //contador=contador+1; contador+=1
+        }
+
+        document.getElementById("resultado").innerHTML+="</ul>";
+      </script>
+  </body>
+</html>
