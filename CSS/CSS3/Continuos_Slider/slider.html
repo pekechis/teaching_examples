@@ -1,0 +1,131 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Transforming and Image using sliders
+    Date: January 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Transforming and Image using and Sliders Element, jQuery and CSS3</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<h1> Transforming an Image with CSS3 Transform </h1>
+	<h3>Accumulative and continuos transformations</h3>
+	<div id="main">
+		<div>
+			<div>
+				<input id="reset" type="button" value="   RESET   "/>
+			</div>
+			<div>
+				<label>Rotate Image</label>
+				<input id="rotate" type="range" min="-1080" max="1080" value="0" />
+			</div>
+			<div>
+				<label>Scale Image</label>
+				<input id="scale" type="range" min="0" max="5" value="1" />
+			</div>
+			<div>
+				<label>Skew X-Axis</label>
+				<input id="sx" type="range" min="0" max="180" value="0" />
+			</div>
+			<div>
+				<label>Skew Y-Axis</label>
+				<input id="sy" type="range" min="0" max="180" value="0" />
+			</div>
+			<div id="applied">
+				<h3>Transformation Applied</h3>
+			</div>
+		</div>
+		<div>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/512px-Home_Icon.svg.png" />
+		</div>
+
+	</div>
+
+
+	<script>
+		//Function executed when the HTML document is Ready (full loaded)
+		$(function() {
+
+			//Get the main image for future references
+			var _image = $("div > div:nth-child(2) img");
+			var _text = "<h3>Transformation Applied</h3>";
+			_image.css("transform"," ");
+			
+
+
+			//Rotate Slider Handler
+			$("#rotate").on("input",function(event) {
+
+				//Get the value of the slider
+				var value = $(this).val();
+				var trans = _image.css("transform");
+				console.log(trans);
+        //Rotate the oirginal image to the current value of the slider
+				_image.css("transform",trans+" rotate(" + value + "deg)");
+				console.log(trans+" rotate(" + value + "deg)");
+				//Show the text of the transformation applied
+				$("#applied").html(_text+"<p>"+"transform:"+"rotate("+value+"deg)</p>");
+
+			});
+
+			//Scale Button Click Handler
+			$("#scale").on("input",function(event) {
+				//Get the value of the slider
+				var value = $(this).val();
+				var trans = _image.css("transform");
+				console.log(trans);
+				//Scale the original image to the current value of the slider
+				_image.css("transform", trans+ " scale(" + value + ")");
+				console.log(trans+ " scale(" + value + ")");
+				//Show the text of the transformation applied
+				$("#applied").html(_text+"<p>"+"transform:"+"scale("+value+")</p>");
+			});
+
+			//SkewX Button Click Handler
+			$("#sx").on("input",function(event) {
+				//Get the value of the slider
+				var value = $(this).val();
+				var trans = _image.css("transform");
+				console.log(trans);
+				//SkewX the original image with the current value of the slider
+				_image.css("transform",trans+ " skewX(" + value + "deg)");
+				//Show the text of the transformation applied
+				$("#applied").html(_text+"<p>"+"transform:"+"skewX("+value+"deg)</p>");
+			});
+
+			//SkewY Button Click Handler
+			$("#sy").on("input",function(event) {
+				//Get the value of the slider
+				var value = $(this).val();
+				var trans = _image.css("transform");
+				console.log(trans);
+				//SkewY the original image with the current value of the slider
+				_image.css("transform",trans + "skewY(" + value + "deg)");
+				//Show the text of the transformation applied
+				$("#applied").html(_text+"<p>"+"transform:"+"skewY("+value+"deg)</p>");
+			});
+
+			//Reset everything to the original value
+			$("#reset").click(function(event) {
+				$("input[type='range']").val(0);
+				$("#scale").val(1);
+				$("img").css({ "transform": "rotate(0deg)"});
+				$("#applied").html("<h3>Transformations Applied</h3>");
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>
