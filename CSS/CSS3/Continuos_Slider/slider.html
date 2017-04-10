@@ -18,8 +18,7 @@
 </head>
 
 <body>
-	<h1> Transforming an Image with CSS3 Transform </h1>
-	<h3>Accumulative and continuos transformations</h3>
+	<h1> Focus - Input - Change </h1>	
 	<div id="main">
 		<div>
 			<div>
@@ -36,6 +35,9 @@
 			<div id="applied">
 				<h3>Transformation Applied</h3>
 			</div>
+			<div id="event">
+				<h3>Event</h3>
+			</div>
 		</div>
 		<div>
 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/512px-Home_Icon.svg.png" />
@@ -49,35 +51,64 @@
 		$(function() {
 
 			//Get the main image for future references
-			var _image = $("div > div:nth-child(2) img");
-			var _text = "<h3>Transformation Applied</h3>";
+			var image = $("div > div:nth-child(2) img");
+			var text = "<h3>Applied Transformation</h3>";
+			var evento ="<h3>Occured Event</h3>";
 
 
-			//Rotate Slider Handler
+			//Continuously Rotate Slider Handler
 			$("#rotate").on("input",function(event) {
 
 				//Get the value of the slider
 				var value = $(this).val();
 
         //Rotate the oirginal image to the current value of the slider
-				_image.css("transform","rotate(" + value + "deg)");
+				image.css("transform","rotate(" + value + "deg)");
 
 				//Show the text of the transformation applied
-				$("#applied").html(_text+"<p>"+"transform:"+"rotate("+value+"deg)</p>");
+				$("#applied").html(text+"<p>"+"transform:"+"rotate("+value+"deg)</p>");
 
+				//Show the event that has ocurred
+				$("#event").html(evento+"<p>"+event.type+"</p>");
 			});
 
-			//Rotate Slider Handler
+			//On Change Rotate Slider Handler
 			$("#rotate2").on("change",function(event) {
+
 
 				//Get the value of the slider
 				var value = $(this).val();
 
         //Rotate the oirginal image to the current value of the slider
-				_image.css("transform","rotate(" + value + "deg)");
+				image.css("transform","rotate(" + value + "deg)");
 
 				//Show the text of the transformation applied
-				$("#applied").html(_text+"<p>"+"transform:"+"rotate("+value+"deg)</p>");
+				$("#applied").html(text+"<p>"+"transform:"+"rotate("+value+"deg)</p>");
+
+				//Show the event that has ocurred
+				$("#event").html(evento+"<p>"+event.type+"</p>");
+
+			});
+
+			//Handlers only for showing the kind of events that have happened
+			$("#rotate2,  #rotate").on("focus",function(event) {
+
+				//Show the event that has ocurred
+				$("#event").html(evento+"<p>"+event.type+"</p>");
+
+			});
+
+			$("#rotate2").on("input",function(event) {
+
+				//Show the event that has ocurred
+				$("#event").html(evento+"<p>"+event.type+"</p>");
+
+			});
+
+			$("#rotate").on("change",function(event) {
+
+				//Show the event that has ocurred
+				$("#event").html(evento+"<p>"+event.type+"</p>");
 
 			});
 
