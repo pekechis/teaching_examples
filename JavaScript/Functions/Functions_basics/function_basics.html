@@ -1,0 +1,59 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Functions Basics
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Basics</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>SUMA</h1>
+
+	<p>
+		<label>X -></label>
+		<input id="X" type="text"/>
+	</p>
+
+	<p>
+		<label>Y -></label>
+		<input id="Y" type="text"/>
+	</p>
+	<p>
+		<input id="suma" value="SUMAR" type="button"/>
+	</p>
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+				function suma(s1,s2) {
+					s1=parseInt(s1);
+					s2=parseInt(s2);
+
+					return s1+s2;
+				}
+
+				$("#suma").click(function () {
+
+					var x = $("#X").val();
+					var y = document.getElementById("Y").value;
+
+					$("body").append("La SUMA es "+ suma(x,y));
+
+				});
+
+
+
+	  });
+	</script>
+
+</body>
+</html>
