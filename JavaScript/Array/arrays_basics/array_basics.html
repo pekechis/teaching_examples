@@ -1,0 +1,71 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: javaScript Arrays Basics
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays Basics</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>Arrays Basics</h1>
+
+	<label>Add New Element</label>
+	<input id="valor" type="text" >
+	<p>
+		<input type="button" value="Add">
+	</p>
+	<p>
+		<input type="button" value="Delete">
+	</p>
+	<p>
+		<input type="button" value="Show">
+	</p>
+
+	<h2>Número de Elemento -> 0</h2>
+
+	<ul id="lista">
+	</ul>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			var vector=[];
+
+			$("input[value='Add']").click(function(event) {
+
+				vector.push($("#valor").val());
+
+				$("h2").html("Número de Elementos ->"+vector.length);
+
+				console.log(vector);
+
+			});
+
+			$("input[value='Delete']").click(function(event) {
+				vector.pop();
+
+				$("h2").html("Número de Elementos ->"+vector.length);
+				console.log(vector);
+			});
+
+			$("input[value='Show']").click(function(event) {
+					$("#lista").html("");
+					for(i=0;i<vector.length;i++) {
+						$("#lista").append("<li>"+vector[i]+"</li>");
+					}
+			});
+	  });
+	</script>
+
+</body>
+</html>
