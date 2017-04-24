@@ -31,11 +31,14 @@
 
 
 		function myFunction(event) {
-			  alert("EVENTO CON JAVASCRIPT");
+			  console.log("EVENTO");
+				document.getElementById("resultado").innerHTML="EVENTO CAPTURADO CON javaScript";
 		}
 
 	  //Function executed when the HTML document is Ready (full loaded)
 	  $(function() {
+
+
 
 				$("input[value='jquery']").click(function(event) {
 					$("#resultado").html("EVENTO CAPTURADO CON jQUERY");
