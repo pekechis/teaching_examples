@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>simplefirefoxextension@jdperez.es</em:id>
+        <em:name>Simple Firefox Extension</em:name>
+        <em:description>Simple Firefox Extension Skeleton for teaching purposes</em:description>
+        <em:version>0.1</em:version>
+        <em:type>2</em:type>
+        <em:creator>Juan Diego Pérez Jiménez</em:creator>
+        <em:homepageURL>http://www.jdperez.es/</em:homepageURL>
+
+        <em:localized>
+            <Description>
+                <em:locale>es-ES</em:locale>
+                <em:name>Extensión Simple para Firefox</em:name>
+                <em:description></em:description>
+            </Description>
+        </em:localized>
+    </Description>
+</RDF>
