@@ -1,0 +1,6 @@
+content   pekechissample                content/
+skin      pekechissample  classic/1.0   skin/
+locale    pekechissample  en-US         locale/en-US/
+locale    pekechissample  es-ES         locale/es-ES/
+
+overlay chrome://browser/content/browser.xul  chrome://xulschoolhello/content/browserOverlay.xul
