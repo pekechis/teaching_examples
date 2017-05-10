@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 70%;
+  margin: 50px auto;
+}
+
+div#content {
+  overflow-y: auto;
+}
+div#content > div {
+  float: left;
+  width: 50%;
+}
+
+div.clear {
+  clear: both;
+  margin-top: 20px;
+}

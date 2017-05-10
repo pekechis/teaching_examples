@@ -1,0 +1,72 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Solution for 12052016 Exam Ex02
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solution for 12052016 Exam Ex02</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div id="container">
+		<h1>Añade Elemento al vector</h1>
+		<p>
+			ELEMENTO A AÑADIR
+			<input type="text" id="valor" placeholder="Inserta Elemento" />
+		</p>
+		<p>
+			<input type="button" value="Añadir al vector" id="add" />
+			<input type="button" value="Mostrar vector" id="show" />
+			<input type="button" value="Vaciar Vector" id="empty" />
+		</p>
+
+		<div >
+			<ul id="resultado">
+			</ul>
+		</div>
+	</div>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			var v=[];
+
+			$("#add").click(function() {
+				 v.push($("#valor").val());
+				 console.log(v);
+			});
+
+			$("#empty").click(function() {
+				v=[];
+				console.log(v);
+			});
+
+			$("#show").click(function() {
+
+				if (v.length==0) {
+					alert("VECTOR VACIO");
+				} else {
+
+					for (i=0; i< v.length; i++) {
+						$("#resultado").append("<li>"+v[i]+"</li>");
+					}
+
+				}
+			});
+
+
+	  });
+	</script>
+
+</body>
+</html>

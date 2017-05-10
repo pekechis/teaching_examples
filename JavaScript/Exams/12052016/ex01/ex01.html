@@ -1,0 +1,88 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Solution for 12052016 Exam Ex01
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solution for 12052016 Exam Ex01</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+	<div id="container">
+		<h1>Lenguajes de Marcas - JavaScript</h1>
+			<div id="content">
+				<div>
+					<textarea id="texto" rows="10" >
+						Cuentas las palabras que hay en el textarea
+					</textarea>
+					<input type="button" value="Contar" id="count" />
+				</div>
+				<div id="numero">
+
+				</div>
+			</div>
+
+		<div class="clear">
+			<p>
+				<input type="text" id="word" placeholder="Insert Word to Search" />
+				<input type="button" value="Buscar" id="search" />
+			</p>
+		</div>
+		<div class="clear">
+			<h3 id="resultado">
+				Aquí debe salir el resultado
+			</h3>
+		</div>
+
+	</div>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("#count").click(function() {
+				var texto= $("#texto").val();
+				var v = texto.split(" ");
+
+				$("#numero").html(v.length+" palabras");
+
+			});
+
+			$("#search").click(function () {
+
+				var b = $("#word").val();
+				$("#resultado").html("");
+
+				var texto= $("#texto").val();
+				var v = texto.split(" ");
+
+				for (i=0; i< v.length;i++) {
+
+					if (b==v[i]) {
+						$("#resultado").append(
+							"<span style='background-color:red' >"+v[i]+" </span>");
+					} else {
+						$("#resultado").append(v[i]+" ");
+					}
+
+				}
+
+
+			});
+
+
+	  });
+	</script>
+
+</body>
+</html>
