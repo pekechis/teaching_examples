@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 80%;
+  margin: 30px auto;
+  border: 5px solid black;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+div#turnos > div {
+  float: left;
+  width: 50%;
+}
