@@ -1,0 +1,82 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Ajax and jSON Example
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax and jSON Example</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>Ajax and jSON Example</h1>
+	<div id="container">
+		<div>
+			Lista de Personajes
+			<ul>
+			</ul>
+		</div>
+		<div id="details">
+		</div>
+	</div>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			//This function recover data from the web service
+			function loadData() {
+			   $.ajax({
+			       url : "http://swapi.co/api/people/",
+			   })
+			           .done(function(data) {
+			                var characters = data.results;
+											console.log(data);
+			                console.log(characters);
+			                for (i=0; i<characters.length;i++) {
+												var text="";
+												text="<li><a href='http://swapi.co/api/people/"+(i+1)+"'>"+characters[i].name+"</a></li>";
+
+												$("ul").append(text);
+			               }
+
+										 $("a").click(function(event) {
+
+											 event.preventDefault();
+											 $("#details").html("");
+											 $.ajax({
+													url : $(this).attr("href"),
+											})
+															.done(function(data) {
+																$("#details").append("<p>Name "+data.name+"</p>");
+																$("#details").append("<p>Mass "+data.mass+"</p>");
+																$("#details").append("<p>Gener "+data.gender+"</p>");
+															})
+															.fail(function() {
+																	alert("Impossible to recover data from the server");
+															});
+										 });
+			           })
+			           .fail(function() {
+										 alert("Impossible to recover data from the server");
+			           });
+			}
+
+			loadData();
+
+
+
+
+	  });
+	</script>
+
+</body>
+</html>

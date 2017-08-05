@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>jQuery Template</title>
+	<title>Basic JavaScript Exam 15-05-2017</title>
 	<!-- Loading jQUery Script -->
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<meta charset="utf-8">
@@ -25,13 +25,10 @@
           <h3>TURNO 1</h3>
           <ul id="turno1">
           </ul>
-          <h3></h3>
 				</div>
 				<div>
-          <h3>TURNO 2</h3>
-          <ul id="turno2">
-          </ul>
           <h3></h3>
+          <h3 id="nt2"></h3>
 				</div>
 			</div>
 	</div>
@@ -41,7 +38,55 @@
 	  //Function executed when the HTML document is Ready (full loaded)
 	  $(function() {
 
+			var v=["Pepe","Manuel","Ana","Julia","Anacleto","Julián","Paco",
+			"Teresa","Juan","Manuel"];
 
+			function repartir_alumnos(alumno) {
+
+				var num=Math.round(Math.random()*100);
+
+				if (num>50) {
+					$("#turno1").append("<li>"+alumno+"</li>");
+				} else {
+					$("#turno2").append("<li>"+alumno+"</li>");
+
+				}
+
+			}
+
+			$("input[value='REPARTIR']").click(function() {
+
+				$("#turno1").html("");
+				$("#turno2").html("");
+
+				for (i=0;i<v.length;i++) {
+					repartir_alumnos(v[i]);
+				}
+
+				var net1=$("#turno1 li").length;
+				var net2=$("#turno2 li").length;
+
+				console.log(net1);
+				console.log(net2);
+
+
+
+				while (net1<5 || net1>6) {
+					$("#turno1").html("");
+					$("#turno2").html("");
+
+					for (i=0;i<v.length;i++) {
+						repartir_alumnos(v[i]);
+					}
+
+					net1=$("#turno1 li").length;
+					net2=$("#turno2 li").length;
+				}
+
+				$("h3#nt1").html(net1+ " alumnos en turno1");
+				$("h3#nt2").html(net2+ " alumnos en turno2");
+
+			});
 
 	  });
 	</script>
