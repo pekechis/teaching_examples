@@ -10,10 +10,12 @@
 
 Notes:
 
-Underlined elements, when clicked, must open in a new windows the following URL http://moodle.asiestrina.es
+All the elements must be centered on the page
 
 ### EXERCISE 02
 
 2. Using HTML tags build a web as close as possible to the image below.
 
 ![Exercise 02](images/examen2.png "Exercise 2")
+
+All the elements must be centered on the page and when clicking on the image a new tab must be open showing the http://www.nasa.gov site
