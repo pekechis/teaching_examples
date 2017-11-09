@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 17-18 HTML Practice 1 EX01</title>
+    <style>
+        td {
+            padding: 10px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>A meeting room reservation form</h2>
+    <h5>Notice how the PHP code for the form remains basically unchanged, despite the template</h5>
+    <!-- The form tag must enclose all the input -->
+    <form>
+        <!--We are going to use table for layouting - Not recommended once CSS it's explained -->
+        <table>
+            <tr>
+                <td><b>Your name:</b><span style="color:red">*</span></td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr style="background-color: #EEEEEE">
+                <td><b>Your email address:</b><span style="color:red">*</span></td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td><b>Department:</b><span style="color:red">*</span></td>
+                <td>
+                    <select required>
+                      <option>-select-</option>
+                      <option>A</option>
+                      <option>B</option>
+                  </select>
+                </td>
+            </tr>
+            <tr style="background-color: #EEEEEE">
+                <td><b>Which room would you like to reserve:</b><span style="color:red">*</span></td>
+                <td>
+                    <input type="radio" name="room" value="A"><b>Room A</b><br>
+                    <input type="radio" name="room" value="B"><b>Room B</b><br>
+                    <input type="radio" name="room" value="A"><b>Room C</b><br>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Extra requirements:</td>
+                <td>
+                    <input type="checkbox" name="extras" value="flip"><b>Flipchart and pens</b><br>
+                    <input type="checkbox" name="extras" value="plasma"><b>Plasma TV screen</b><br>
+                    <input type="checkbox" name="extras" value="drinks"><b>Coffe, Tea and mineral water</b><br>
+                </td>
+            </tr>
+            <tr style="background-color: #EEEEEE">
+                <td><b>Reservation date</b><span style="color:red">*</span></td>
+                <td>
+                    <input type="date" required><img align="top" height="30px" src="images/calendar.png"><br>
+                    <small>>Date format is YYYY-MM-DD</small>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Reservation time:</b></td>
+                <td>
+                    <select>
+                      <option>09</option>
+                      <option>08</option>
+                      <option>07</option>
+                    </select>
+                    <select>
+                      <option>00</option>
+                      <option>15</option>
+                      <option>30</option>
+                      <option>45</option>
+                      </select>
+                </td>
+            </tr>
+            <tr style="background-color: #EEEEEE">
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
