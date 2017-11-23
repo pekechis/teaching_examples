@@ -8,13 +8,13 @@
   <body>
     <?php
 
-      include_once("db.php");
+      var_dump(include_once "db.php");
 
-      if ($connection=conectar()) {
+      if (!$connection=conectar()) {
         exit();
       }
 
-      
+
       //MAKING A SELECT QUERY
       /* Consultas de selección que devuelven un conjunto de resultados */
         $query="SELECT * from CLIENTES";
