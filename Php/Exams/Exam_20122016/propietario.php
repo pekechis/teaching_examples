@@ -36,10 +36,12 @@
             //Construyo la lista
             echo "<ul>";
             echo "<li>Nombre:".$obj->nombre."</li>";
-            echo "<li>Apellidps:".$obj->apellidos."</li>";
+            echo "<li>Apellidos:".$obj->apellidos."</li>";
             echo "<li>Dirección:".$obj->direccion."</li>";
             echo "<li>Teléfono:".$obj->telefono."</li>";
             echo "</ul>";
+
+            echo "<a href='vehiculos.php'>Volver</a>";
         } else {
           echo $query;
           echo "No se pudo obtener el propietario";
