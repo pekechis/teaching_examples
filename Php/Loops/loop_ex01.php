@@ -24,7 +24,7 @@
         echo "LOOP USING WHILE<br>";
         while ($i<=10) {
           echo $i."<br>"; //Show the number in the screen
-          $i++; //Increment the value of the variable
+          //$i++; //Increment the value of the variable
         }
 
         //The same example using a for loop
