@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 80%;
+  margin: 10px auto;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+#cabecera {
+  background-color: black;
+  color: white;
+  overflow-y: auto;
+}
+
+#cabecera div:nth-child(1) {
+  float:left;
+  margin: 10px;
+}
+
+#cabecera div:nth-child(2) {
+  float: right;
+  margin: 10px;
+  margin-top: 60px;
+}
+
+#menu {
+  background-color:  #697F55;
+  color: white;
+  overflow-y: auto;
+  border-bottom: 3px solid #3A4D28;
+}
+#menu div {
+  float:left;
+  padding: 10px;
+}
+
+#contenido {
+  overflow-y: auto;
+}
+#izquierda, #derecha {
+  float: left;
+  width: 20%;
+}
+
+#izquierda > div , #derecha > div {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #C8C9C7;
+  height: 150px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#derecha img {
+  width:90%;
+  height: 95px;
+  text-align: center
+}
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#central {
+  float: left;
+  width: 60%;
+}
+
+#central > div:nth-child(1) {
+  width: 80%;
+  margin: 30px auto;
+}
+
+#central div#centro img {
+  width: 100%;
+}
+
+#categorias {
+  background-color: #E3E3E3;
+  font-weight: bold;
+  border-bottom: 2px solid #697F55;
+}
+
+#cursos {
+  border-radius: 5px;
+  background-color: #DDD;
+  position: relative;
+  border: 1px solid #697F55;
+  margin-top: 10px;
+}
+
+#cursos img {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#cursos ul {
+  list-style: none;
+  color: #697F55;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+#cursos ul li {
+  margin: 10px;
+}
+
+#cursos ul li span {
+  color: black;
+}
+
+#pie {
+  clear: left;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#pie p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
