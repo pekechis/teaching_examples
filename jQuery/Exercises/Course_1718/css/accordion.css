@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #CCCCCC;
+  border-radius : 10px;
+  margin: 100px auto;
+  width: 80%;
+  height: 400px;
+}
+
+section {
+  float:left;
+  height: 100%;
+  padding: 10px;
+  width: 50%;
+}
+
+.title {
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    float:left;
+    height: 100%;
+    position: relative;
+    font-weight: bolder;
+    width: 20%;
+}
+
+.title h1 {
+  bottom: 5px;
+  left: 30%;
+  position: absolute;
+}
+
+.title h3 {
+  bottom: 10%;
+  left: 30%;
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%;
+  width: 200px;
+}
+
+.content {
+  float:left;
+  width: 80%;
+  height: 100%;
+  padding: 10%;
+}
+
+.img {
+  float: left;
+  width: 60%;
+}
+
+.img img {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.text {
+  float: left;
+  width: 40%;
+}

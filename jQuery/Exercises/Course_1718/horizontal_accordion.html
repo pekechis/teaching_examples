@@ -1,0 +1,144 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Horizontal Accordion
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horizonatal Accordion</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/accordion.css" />
+</head>
+<body>
+
+	<div class="container">
+		<section>
+			<div class="title">
+				<h1>1.</h1>
+				<h3>Título Sección 1</h3>
+			</div>
+			<div class="content">
+				<div class="img">
+					<img src="img/cuervo.jpg" />
+				</div>
+				<div class="text">
+					<ul>
+						<li>UNO</li>
+						<li>DOS</li>
+						<li>TRES</li>
+						<li>CUATRO</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="title">
+				<h1>2.</h1>
+				<h3>Título Sección 2</h3>
+			</div>
+			<div class="content">
+				<div class="img">
+					<img src="img/cuervo.jpg" />
+				</div>
+				<div class="text">
+					<ul>
+						<li>UNO</li>
+						<li>DOS</li>
+						<li>TRES</li>
+						<li>CUATRO</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="title">
+				<h1>3.</h1>
+				<h3>Título Sección 3</h3>
+			</div>
+			<div class="content">
+				<div class="img">
+					<img src="img/cuervo.jpg" />
+				</div>
+				<div class="text">
+					<ul>
+						<li>UNO</li>
+						<li>DOS</li>
+						<li>TRES</li>
+						<li>CUATRO</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="title">
+				<h1>4.</h1>
+				<h3>Título Sección 4</h3>
+			</div>
+			<div class="content">
+				<div class="img">
+					<img src="img/cuervo.jpg" />
+				</div>
+				<div class="text">
+					<ul>
+						<li>UNO</li>
+						<li>DOS</li>
+						<li>TRES</li>
+						<li>CUATRO</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="title">
+				<h1>5.</h1>
+				<h3>Título Sección 5</h3>
+			</div>
+			<div class="content">
+				<div class="img">
+					<img src="img/cuervo.jpg" />
+				</div>
+				<div class="text">
+					<ul>
+						<li>UNO</li>
+						<li>DOS</li>
+						<li>TRES</li>
+						<li>CUATRO</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("section").width("10%");
+			$("section .title").width("100%");
+			$("section .content").hide();
+
+
+			$("section").mouseenter(function() {
+				$(this).width("50%");
+				$(this).children(".title").width("20%");
+				$(this).children(".content").show();
+
+			});
+
+			$("section").mouseleave(function() {
+				$("section").width("10%");
+				$("section .title").width("100%");
+				$("section .content").hide();
+			});
+
+	  });
+	</script>
+
+</body>
+</html>
