@@ -41,12 +41,11 @@
               //Click handler for closing arrow
               $("#close").click(function() {
                 //$("#content").hide();
-                $(this).parent().siblings().hide();
+                $(this).parent();().siblings().hide();
                 $(this).hide();
                 $("#open").show();
-                / /$(this).next().show();
-                //$(this).siblings().show();
-                //$(this).nextAll().show();
+                $(this).next().show();
+
               });
 
               $("#open").click(function() {
