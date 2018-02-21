@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 80%;
+  margin:50px auto;
+}
+
+
+
+img {
+  float: left;
+  width: 25%;
+  height: 150px;
+  padding: 20px;
+}
+
+.seleccionada {
+  border: 10px solid red;
+}
+
+input {
+  margin-top: 10px;
+}

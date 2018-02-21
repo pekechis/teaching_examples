@@ -1,0 +1,66 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div id="container">
+		<div>
+			<img src="img/burro.jpg" title="burro"/>
+			<img src="img/gallo.jpg" title="gallo"/>
+			<img src="img/gato.jpg" title="gato"/>
+			<img src="img/leon.jpg" title="leon"/>
+		</div>
+		<div>
+			<img src="img/mono.jpg" title="mono"/>
+			<img src="img/oso.jpg" title="oso"/>
+			<img src="img/perro.jpg" title="perro"/>
+			<img src="img/zorro.jpg" title="zorro"/>
+		</div>
+		<div>
+			<input type="text">
+			<input type="button" value="buscar">
+		</div>
+
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("input[type='button']").click(function(event) {
+
+				var nombre = $("input[type='text']").val();
+
+				$("img").removeClass("seleccionada");
+				
+				$("img").each(function() {
+
+					 var t = $(this).attr("title");
+
+					 if (nombre==t) {
+						 $(this).addClass("seleccionada");
+					 }
+
+				});
+
+			});
+
+	  });
+	</script>
+
+</body>
+</html>
