@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding-top: 60px;
+}
+
+#container {
+  width: 100%;
+  margin: 0px auto;
+}
+
+#menu {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+#menu div {
+  float: left;
+  width: 25%;
+  background-color: red;
+  color:white;
+  height: 50px;
+  padding: 20px;
+}
+
+#controles {
+  margin: 40px;
+}
+h1 {
+  text-align: center;
+}
+
+#imagen {
+  width: 20%;
+  margin:50px auto;
+}
+
+#imagen img {
+  width: 100%;
+}

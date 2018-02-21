@@ -30,7 +30,8 @@
 
 				$("body").keypress(function(event) {
 
-					var tecla = event	.which;
+					var tecla = event.which;
+
 
 					//Get the current position
 					var left = parseInt($("#square").css("left"));
@@ -40,28 +41,27 @@
            //LEFT z code 122
 					if (tecla == 122 && left > 0) {
 						$("#square").animate({
-							left : "-=10px"
+							left : "-=50px"
 						},200);
 					}
 
           //UP s code 115
 					if (tecla == 115 && top > 0) {
 						$("#square").animate({
-							top : "-=10px"
+							top : "-=50px"
 						},200);
 					}
 
           //DOWN x code 120
 					if (tecla == 120 && top < 365) {
 						$("#square").animate({
-							top : "+=10px"
+							top : "+=50px"
 						},200);
 					}
-
 					//RIGHT c code 99
 					if (tecla == 99 && left < 570) {
 						$("#square").animate({
-							left : "+=10px"
+							left : "+=50px"
 						},200);
 					}
 
