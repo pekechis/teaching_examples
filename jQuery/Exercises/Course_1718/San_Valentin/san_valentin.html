@@ -66,12 +66,12 @@
 
 			$("img").mouseenter(function() {
 				$("h1").show();
-				$(this).parent().css("width","40%");
+				$(this).parent().animate({"width":"40%"});
 			});
 
 			$("img").mouseleave(function() {
 				$("h1").hide();
-				$(this).parent().css("width","20%");				
+				$(this).parent().animate({"width":"20%"});				
 			});
 	  });
 	</script>
