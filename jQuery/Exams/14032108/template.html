@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Examen jQuery 14-03-2018</title>
+    <!-- Loading jQUery Script -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" </head>
+
+    <body>
+
+        <h1>Super Mario Kart</h1>
+        <div class="container">
+            <div id="imagenes">
+                <div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/01.jpg" title="Tortuga">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/02.jpg" title="Princesa">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/03.jpg" title="Monstruo">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" title="Fantasma">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/04.jpg" title="Fantasma">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/05.jpg" title="Mono">
+                    </div>
+                </div>
+            </div>
+            <div id="listas">
+                <h3>Resultados</h3>
+                <ol>
+
+                </ol>
+                <p>
+                    <input type="button" value="Resultados">
+                </p>
+                <p>
+                    <input type="button" value="Resetear">
+                </p>
+            </div>
+
+        </div>
+
+
+        <script>
+            //Function executed when the HTML document is Ready (full loaded)
+            $(function() {
+
+
+            $("input[value='Resultados']").click(function() {
+
+                 var primero="";
+                 var segundo="";
+                 var tercero="";
+
+             $("input[type='text']").each(function() {
+
+                 var valor = parseInt($(this).val());
+
+
+                 if (valor==1) {
+                    
+                     $(this).parent().next().children().animate({
+                         "margin-top" : "500px"
+                     });
+                     $(this).parent().next().append("<h3>1º</h3>");
+
+                     primero=$(this).parent().next().children().attr("title");
+
+                    
+
+
+                 }
+
+                 if (valor==2) {
+                    $(this).parent().next().children().animate({
+                         "margin-top" : "300px"
+                     });
+                     $(this).parent().next().append("<h3>2º</h3>");
+
+                      segundo=$(this).parent().next().children().attr("title");
+
+                       
+
+                 }
+
+                 if (valor==3) {
+                    $(this).parent().next().children().animate({
+                         "margin-top" : "100px"
+                     });
+                     $(this).parent().next().append("<h3>3º</h3>");
+
+                       tercero=$(this).parent().next().children().attr("title");
+
+                        
+
+                 }
+
+             });
+
+             $("ol").append("<li>"+primero+"</li>");
+             $("ol").append("<li>"+segundo+"</li>");
+             $("ol").append("<li>"+tercero+"</li>");
+
+            });
+
+
+            $("input[value='Resetear']").click(function() {
+               
+               $("input[type='text']").val("");
+
+               $("ol").html("");
+
+               $("h3").remove();
+
+               $("img").css("margin-top","0px");
+
+            });
+
+
+
+
+
+
+
+
+
+            });
+        </script>
+
+    </body>
+
+</html>

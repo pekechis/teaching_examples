@@ -1,0 +1,15 @@
+$ancho: 1024px;
+$color-letra: red;
+
+.contenedor {
+    width: $ancho;
+}
+
+h1,h2,h3,p {
+    color: $color-letra;
+}
+
+
+h6.c {
+    color: $color-letra;
+}
