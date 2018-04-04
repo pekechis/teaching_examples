@@ -1,0 +1,169 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<h1>jQuery Template</h1>
+
+	<div id="container">
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Nota</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Pepe</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Manue</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Rosa</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>José</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Carmen</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Alberto</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Carlos</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Alejandro</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>David</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Miriam</td>
+						<td>Perez</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<input type="button" value="Comprobar" />
+				<input type="button" value="Resetear" />
+			</p>
+		</div>
+		<div>
+			<div class="lista">
+				<h3>Suspensos</h3>
+				<ul></ul>
+			</div>
+			<div class="lista">
+				<h3>Aprobados</h3>
+				<ul></ul>
+			</div>
+			<div class="lista">
+				<h3>Sobresalientes</h3>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//Function executed when the HTML document is Ready (full loaded)
+		$(function () {
+
+
+			$("input[value='Resetear']").click(function(event) {
+				$("input[type='text']").val("");
+				$("ul").empty();
+				$("input[type='text']").css("background-color","white");
+			});
+
+			$("input[value='Comprobar']").click(function(event) {
+				
+				$("input[type='text']").each(function(index) {
+					
+					var valor = parseInt($(this).val());
+					var nombre = $(this).parent().prev().prev().text();
+					var apellidos = $(this).parent().prev().text();
+
+					if (valor < 5) {
+						$(".lista:nth-child(1) ul").append("<li>"+nombre+" "+apellidos+"</li");
+					} else if (valor>=5 && valor <=8) {
+						$(".lista:nth-child(2) ul").append("<li>"+nombre+" "+apellidos+"</li");
+					} else if (valor>8 && valor <=10) {
+						$(".lista:nth-child(3) ul").append("<li>"+nombre+" "+apellidos+"</li");
+
+					} else {
+						$(this).css("background-color","red");
+					}
+
+				});
+			});
+
+
+
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+div#container > div {
+    float:left;
+    width: 50%;
+}
+
+.lista {
+    float:left;
+    width: 33%;
+}

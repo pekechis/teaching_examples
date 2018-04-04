@@ -49,12 +49,12 @@
 
 				$("input[value='Buscar']").click(function() {
 
-						$("tbody tr td:first-child").each( function(index) {
+						var valor = $("input[type='text']").val();
 
-							var valor = $("input[type='text']").val();
+						$("tbody tr td:first-child").each( function(index) {							
 
 							if ($(this).text()==valor) {
-                $("tr").removeClass("encontrado");
+               // $("tr").removeClass("encontrado");
 								$(this).parent().addClass("encontrado");
 							}
 
