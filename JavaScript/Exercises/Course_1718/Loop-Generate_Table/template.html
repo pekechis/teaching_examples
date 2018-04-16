@@ -1,0 +1,62 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<p>
+		<label>Número de Filas</label>	
+		<input id="filas" type="text">
+	</p>
+
+	<p>
+		<label>Número de Columnas</label>	
+		<input id="cols" type="text">
+	</p>
+
+	<input type="button" value="General Tabla">
+
+	<table>
+
+	</table>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+		$("input[type='button']").click(function() {
+			$("table").html("");
+			
+			var f = parseInt($("#filas").val());
+			var c = parseInt($("#cols").val());
+
+			for(i=0;i<f;i++) {
+				$("table").append("<tr>");
+
+				for (j=0;j<c;j++) {
+					$("table").append("<td>X</td>");
+				}
+
+				$("table").append("</tr>");
+			}
+
+		});
+
+
+	  });
+	</script>
+
+</body>
+</html>
