@@ -16,13 +16,36 @@
 </head>
 <body>
 
-	<h1>jQuery Template</h1>
+	<input type="text">
+	<input type="button" value="Genera Lista">
+
+	<ul>
+
+	</ul>
 
 	<script>
 	  //Function executed when the HTML document is Ready (full loaded)
 	  $(function() {
 
 
+		$("input[type='button']").click(function() {
+			$("ul").text("");
+			var numero=parseInt($("input[type='text']").val());
+
+			console.log(numero);
+			/*for (i=1;i<=numero;i++) {
+				$("ul").append("<li>"+i+"</li>");
+
+			}*/
+
+			var i=1;
+
+			while(i<=numero) {
+				$("ul").append("<li>"+i+"</li>");
+				i++;
+			}
+
+		});
 
 	  });
 	</script>
