@@ -1,0 +1,99 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>Switch Example</h1>
+	<table border="1">
+		<!-- TABLE NAME -->
+		<caption>
+		  CLASSROOM SCHEDULE
+		</caption>
+		<!-- FIRST ROW. HEADER  -->
+		<tr>
+		  <th></th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th>
+		</tr>
+		<!-- CLASSROOM ROWS -->
+		<tr>
+		  <td>8:15</td><td>ISO</td><td>ISO</td><td>ISO</td><td>ISO</td><td>ISO</td>
+		</tr>
+		<tr>
+		  <td>9:15</td><td>GBD</td><td>GBD</td><td>GBD</td><td>GBD</td><td>GBD</td>
+		</tr>
+		<tr>
+		  <td>10:15</td><td>PAR</td><td>PAR</td><td>PAR</td><td>PAR</td><td>PAR</td>
+		</tr>
+		<tr>
+		  <td>11:15</td><th colspan="5">FREE TIME</th>
+		</tr>
+		<tr>
+		  <td>11:45</td><td>FHW</td><td>FHW</td><td>FHW</td><td>FHW</td><td>FHW</td>
+		</tr>
+		<tr>
+		  <td>12:45</td><td>FOL</td><td>FOL</td><td>FOL</td><td>FOL</td><td>FOL</td>
+		</tr>
+		<tr>
+		  <td>13:45</td><td>LM</td><td>LM</td><td>LM</td><td>LM</td><td>LM</td>
+		</tr>
+	  </table>
+
+		<select>
+			<option value="1">Lunes</option>
+			<option value="2">Martes</option>
+			<option value="3">Miércoles</option>
+			<option value="4">Jueves</option>
+			<option value="5">Viernes</option>
+		</select>
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+
+			$("select").on("change",function(event) {
+
+				var dia=$(this).val();
+		
+				switch (dia) {
+					case "1":
+						$("td").css("background-color","white");
+						$("td:nth-child(2)").css("background-color","red");
+						break;
+					case "2":
+					$("td").css("background-color","white");
+						$("td:nth-child(3)").css("background-color","red");
+						break;
+					case "3":
+						$("td").css("background-color","white");
+						$("td:nth-child(4)").css("background-color","red");
+						break;
+					case "4":
+						$("td").css("background-color","white");
+						$("td:nth-child(5)").css("background-color","red");
+					  break;
+					case "5":
+						$("td").css("background-color","white");
+						$("td:nth-child(6)").css("background-color","red");
+						break;
+				}
+
+
+			});
+
+	  });
+	</script>
+
+</body>
+</html>
