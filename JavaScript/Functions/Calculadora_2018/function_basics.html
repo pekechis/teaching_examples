@@ -1,0 +1,87 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Functions Basics
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Basics</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>CALCULATOR USING FUNCTIONS</h1>
+
+	<p>
+		<label>X -></label>
+		<input id="X" type="text"/>
+	</p>
+
+	<p>
+		<label>Y -></label>
+		<input id="Y" type="text"/>
+	</p>
+	<p>
+		<input  value="+" type="button"/>
+		<input  value="-" type="button"/>
+		<input  value="*" type="button"/>
+		<input  value="/" type="button"/>
+	</p>
+	<h1 id="result"></h1>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+		function calcular(p1,p2,p3) {
+
+			var resultado;
+
+			if (p3=="+") {
+				resultado=p1+p2;
+			} else if (p3=="-") {
+				resultado=p1-p2;
+			} else if (p3=="/") {
+				resultado=p1/p2;
+			} else {
+				resultado=p1*p2;
+			}
+
+			return (p1+p3+p2+"="+resultado)			;
+
+		}
+
+
+		$("input[type='button']").click(function(event) {
+
+
+			var x = parseInt($("#X").val());
+			var y = parseInt($("#Y").val());
+
+			var op = $(this).val();
+
+			var resultado = calcular(x,y,op);
+			$("#result").html(resultado);
+
+
+
+		});
+				
+				
+
+
+
+
+
+
+	  });
+	</script>
+
+</body>
+</html>
