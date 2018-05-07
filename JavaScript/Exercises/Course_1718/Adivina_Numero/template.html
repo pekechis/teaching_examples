@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>Adivina número entre 1 y 100</h1>
+	<div id="intentos"></div>
+	<div id="resultado"></div>
+	<input id="resetear" type="button" value="Jugar">
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+		  var numa;
+		  console.log(numa);
+		  var numintentosmax = 5;
+		  var numintentos = 0;
+		  var encontrado = false;
+
+		  function jugar() {
+			$("#intentos").text("");
+			$("#resultado").tex("");
+			numa = Math.floor((Math.random() * 100) + 1);
+			console.log(numa);
+			numintentos=0;
+			encontrado=false;
+
+			 while (!encontrado && numintentos<numintentosmax) {
+
+				var  i = parseInt(prompt("Introduce el número:"));
+
+				if (numa > i) {
+				console.log("El número buscado es mayor que "+i);
+				$("#intentos").append("<p>El número buscado es mayor que "+i+"</p>");
+				} else if (numa < i) {
+				console.log("El número buscado es menor que "+i);
+				$("#intentos").append("<p>El número buscado es menor que "+i+"</p>");	
+				} else {
+				encontrado=true;
+				}
+
+				numintentos++;
+				}
+
+				if (encontrado) {
+				$("#resultado").text("Has acertado");
+				} else {
+				$("#resultado").text("Has perdido. El número era: "+numa); 
+				}
+		  }
+
+
+		  $("#resetear").click(function() {
+			jugar();	
+		  });
+
+	  });
+	</script>
+
+</body>
+</html>
