@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+                                                                                                                                                                                                                            <!DOCTYPE html>
 <!--
     Author: Juan Diego Pérez @pekechis
     E-mail: contact@jdperez.es
     Description: HTML5 Canvas Example
-    Date: April 2015
+    Date: April 2015                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     Reference: http://www.w3schools.com/html/html5_canvas.asp // http://www.w3schools.com/canvas/default.asp
     Requires: HTML & jQuery knowledge
 -->
@@ -37,9 +37,16 @@
              º
         -->
         <div id="container">
-            <h2>Text and lines</h2>
+            <h1>Canvas 1</h1>
             <canvas id="myCanvas1" width="800" height="200" style="border:1px solid #000000;"></canvas>
+            <h1>Canvas 2</h1>
             <canvas id="myCanvas2" width="800" height="200" style="border:1px solid #000000;"></canvas>
+            <h1>Canvas 3</h1>
+            <canvas id="myCanvas3" width="800" height="200" style="border:1px solid #000000;"></canvas>
+            <h1>Canvas 4</h1>
+            <canvas id="myCanvas4" width="800" height="200" style="border:1px solid #000000;"></canvas>
+            <h1>Canvas 5</h1>
+            <canvas id="myCanvas5" width="800" height="200" style="border:1px solid #000000;"></canvas>
         </div>
 
         <script>
@@ -49,18 +56,86 @@
 
                 //Getting the jQuery Object and transforming it to JavaScript object with get(0)
                 var c = $("#myCanvas1").get(0);
+                var c2 = $("#myCanvas2").get(0);
+                var c3 = $("#myCanvas3").get(0);
+                var c4 = $("#myCanvas4").get(0);
+                var c5 = $("#myCanvas5").get(0);
+
+
 
                 //Setting the context mode - 2d for the moment
                 var ctx = c.getContext("2d");
+                var ctx2 = c2.getContext("2d");
+                var ctx3 = c3.getContext("2d");
+                var ctx4 = c4.getContext("2d");
+                var ctx5 = c5.getContext("2d");
+
 
                 var x1=50;
                 var y1=0;
+                var x2=0;
+                var y2=20;
+                var x3=0;
+                var y3=0;
+                var x32 = c.width;
+                var y32 = c.height;
+
+                var x4=0;
+                var y4=0;
+                var x42 = c.width;
+                var y42 = c.height;
+
+                var x5=20;
+                var y5=20;
+                var wi= c5.width-40;
+                var hi= c5.height-40;
+
+
 
                 while (x1<c.width) {
                   ctx.moveTo(x1,y1);
                   ctx.lineTo(x1,c.height);
                   ctx.stroke();
                   x1+=50; //x1=x1+50
+                }
+
+                ctx4.font = "30px Arial";
+                ctx4.strokeText("Hello World",320,50);
+
+                while (y2<c2.height) {
+                    ctx2.moveTo(x2,y2);
+                    ctx2.lineTo(c.width,y2);
+                    ctx2.stroke();
+                    y2+=20;
+
+                }
+
+                while (x3<=c3.width) {
+                    ctx3.moveTo(x3,y3);
+                    ctx3.lineTo(x32,y32);
+                    ctx3.stroke();
+                    x3+=20;
+                    x32-=20;
+
+
+                }
+
+                while (y4<=c4.height) {
+                    ctx4.moveTo(x4,y4);
+                    ctx4.lineTo(x42,y42);
+                    ctx4.stroke();
+                    y4+=20;
+                    y42-=20;
+                }
+
+
+                while (hi>0) {
+                    ctx5.rect(x5,y5,wi,hi);
+                    ctx5.stroke();
+                    x5+=20;
+                    y5+=20;
+                    wi-=40;
+                    hi-=40;
                 }
 
 

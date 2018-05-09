@@ -46,7 +46,7 @@
                 var x = 380;
                 var y = 180;
                 var size = 20;
-                var movimiento = "ABAJO";
+                var movimiento = "ARRIBA";
 
                 var intervalo;
 
@@ -92,7 +92,7 @@
                     }
                 }
 
-                intervalo = setInterval(updatePosition, 1000);
+                intervalo = setInterval(updatePosition, 100);
 
                 $("body").keydown(function(event) {
                     var tecla = event.which;
