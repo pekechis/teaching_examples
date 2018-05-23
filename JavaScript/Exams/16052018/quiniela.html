@@ -1,0 +1,197 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: Template for jQuery Exercises
+    Date: December 2016
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Examen javaScript 16-05-2018</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<h1>La Quiniela - Jornada 38</h1>
+	<div class="container">
+		<div class="partido">
+			<span>Celta</span>-<span>Levante</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Las Palmas</span>-<span>Girona</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Leganés</span>-<span>Betis</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Málaga</span>-<span>Getafe</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Sevilla</span>-<span>Alavés</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Villareal</span>-<span>Real Madrid</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Athletic</span>-<span>Español</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Atlético</span>-<span>Eibar</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Barcelona</span>-<span>Real Sociedad</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Valencia</span>-<span>Deportivo</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Huesca</span>-<span>Sporting</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Zaragoza</span>-<span>Rayo Vallecano</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Numancia</span>-<span>Valladolid</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="partido">
+			<span>Almería</span>-<span>Albacete</span>
+			<select class="resultado">
+				<option value="1">1</option>
+				<option value="X">X</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div class="botones">
+				<input type="button" value="Comprobar" >
+				<input type="button" value="Resetear" >
+		</div>
+		<h1 id="result"></h1>
+	</div>
+
+	<script>
+		//Function executed when the HTML document is Ready (full loaded)
+		$(function () {
+			
+			var cg = ["1","1","2","2","2","2","1","2","2","2","1","1","2","1"];
+			var apuesta = [];
+
+			function comprobar(v1,v2) {
+
+				var aciertos = 0;
+
+				for (i=0;i<v1.length;i++) {
+
+					if (v1[i]==v2[i]) {
+						aciertos++;
+					}
+				}
+
+				return aciertos;
+
+			}
+
+			$("input[value='Comprobar']").click(function() {
+
+				apuesta=[];
+
+				$("select").each(function() {
+
+					apuesta.push($(this).val());
+
+				});
+
+				var aciertos = comprobar(cg,apuesta);
+				 
+				$("#result").text("Ha acertado "+aciertos+" resultados");
+
+			});
+
+
+
+			$("input[value='Resetear']").click(function() {
+
+				$("#result").text("");
+				apuesta=[];
+				$("select").val("1");
+			});
+
+
+
+		});
+	</script>
+
+</body>
+
+</html>

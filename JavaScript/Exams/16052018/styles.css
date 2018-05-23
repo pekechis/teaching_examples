@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+.container {
+    width: 75%;
+    margin: 20px auto;
+}
+
+.partido {
+    width: 50%;
+}
+.container span {
+    width: 25%;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.partido select {
+    float: right;
+}
+
+.botones {
+    margin: 30px;
+    text-align: center;
+}
