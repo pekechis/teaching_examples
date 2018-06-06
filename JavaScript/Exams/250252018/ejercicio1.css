@@ -1,0 +1,26 @@
+#platos {
+width: 90%;
+margin: 10px auto;
+
+}
+
+img {
+    width:100%;
+    height: 200px;
+    padding: 20px;
+}
+
+h1 {
+	text-align:center;
+    color: green;
+    background-color: red;
+}
+
+.plato {
+	float: left;
+    width: 25%;
+}
+
+h5 {
+    display:inline;
+}

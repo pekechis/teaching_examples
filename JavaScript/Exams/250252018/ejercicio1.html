@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <link href="ejercicio1.css" rel="stylesheet" type="text/css">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <form>
+    <h1>RESTAURANTE "EL CHAVO DEL 8"</h1>
+    <div id="platos">
+      <div class="plato">
+        <img src="nachos.jpg" /> Nachos: Precio 5&euro;
+        <input id="p1" type="text" size="5" value="2" /> STOCK: <span id="s1">20</span>
+      </div>
+      <div class="plato">
+        <img src="enchilada.jpg" /> Enchilada: Precio 7&euro;
+        <input id="p2" type="text" size="2" value="1" /> STOCK: <span id="s2">10</span>
+      </div>
+      <div class="plato">
+        <img src="tacos.jpg" /> Tacos: Precio 10&euro;
+        <input id="p3" type="text" size="2" value="2" /> STOCK: <span id="s3">15</span>
+      </div>
+      <div class="plato">
+        <img src="quesadillas.jpg" /> Quesadillas: Precio 5&euro;
+        <input id="p4" type="text" size="2" value="3" /> STOCK: <span id="s4">30</span>
+      </div>
+      <p><input id="calcular" type="button" value="Calcular Precio" /></p>
+    </div>
+  </form>
+
+  <script>
+    $(function() {
+
+      function actualizar() {
+
+        $("input[type='text'").each(function() {
+
+          var p=parseInt($(this).val());
+          var s=parseInt($(this).next().text());
+
+          $(this).next().text(s-p)
+        });
+
+
+
+      }
+
+      function hacer_pedido() {
+
+        $("span").each(function() {
+
+          var valor=parseInt($(this).text());
+
+          if (valor<5) {
+            $(this).prev().prev().css("border","3px solid red");
+          }
+          
+        });
+      }
+
+      $("#calcular").click(function(event) {
+
+        var p1= parseInt($("#p1").val());
+        var p2= parseInt($("#p2").val());
+        var p3= parseInt($("#p3").val());
+        var p4= parseInt($("#p4").val());
+
+        var s1= parseInt($("#s1").text());
+        var s2= parseInt($("#s2").text());
+        var s3= parseInt($("#s3").text());
+        var s4= parseInt($("#s4").text());
+
+        if (p1>s1 || p2>s2 || p3>s3 || p4>s4) {
+          alert("No tengo suficiente stock")
+        } else {
+
+         $("#platos").append("<p>"+p1+"x5="+(p1*5)+"</p>");
+         $("#platos").append("<p>"+p2+"x7="+(p2*7)+"</p>");
+         $("#platos").append("<p>"+p3+"x10="+(p3*10)+"</p>");
+         $("#platos").append("<p>"+p4+"x5="+(p4*5)+"</p>");
+         $("#platos").append("TOTAL= "+(p1*5+p2*7+p3*10+p4*5));
+
+         actualizar();
+         hacer_pedido();
+
+        }
+
+
+
+      });
+    });
+  </script>
+</body>
+
+</html>
