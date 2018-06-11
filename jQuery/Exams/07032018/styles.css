@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 100px auto;
+    width: 50%;
+}
+
+.registro {
+    border: 1px solid blue;
+    padding:  30px;
+    border-radius: 5px; 
+    overflow: auto;
+}
+
+label {
+    display: block;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+}
+
+input[type="button"] {
+    float: right;
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+    height: 30px;
+    border-radius: 3px;
+    margin: 20px 30px;
+}
+
+.container > div:nth-child(1) {
+    overflow-y: auto;
+}

@@ -1,0 +1,95 @@
+<!--
+    Author: Juan Diego Pérez @pekechis
+    Description:
+    Date: March 2018
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examen jQuery 07-03-2018</title>
+
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div class="container">
+		<div>
+			<img src="img/open.png">
+		</div>
+		<div class="registro">
+			<form>
+				<div>
+					<label>Nombre:</label>
+					<input type="text" name="nombre">
+				</div>
+				<div>
+					<label>Apellidos:</label>
+					<input type="text" name="apellidos">
+				</div>
+				<div>
+					<label>Contraseña:</label>
+					<input type="password" name="pass1">
+				</div>
+				<div>
+					<label>Confirmar contraseña:</label>
+					<input type="password" name="pass2">
+				</div>
+				<div>
+					<input id="registro" type="button" value="Registar Usuario">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+		  $("div > div:nth-child(1)").hide();
+		  $("img").css("height","30px");
+
+		  $("#registro").click(function(event) {
+
+			var nombre = $("input[name='nombre']").val();
+			var p1 = $("input[name='pass1']").val();
+			var p2 = $("input[name='pass2']").val();
+
+			if (p1==p2) {
+				$(".registro").hide();
+				$("div > div:nth-child(1)").show();
+				$("div > div:nth-child(1)").prepend("Bienvenido "+nombre);
+			} else {
+				$("#registro").parent().prepend("Las constraseñas no coinciden").css("color","red");
+			}
+
+		  });
+
+		  $("img").mouseenter(function() {
+			  $(this).attr("src","img/close.png");
+
+		  });
+		  
+		  $("img").mouseleave(function() {
+			  $(this).attr("src","img/open.png");
+
+		  });
+
+		  $("img").click(function() {
+			$("div > div:nth-child(1)").hide();
+			$(".registro").show();
+			$("input[type='text'],input[type='password']").val("");
+			$("div > div:nth-child(1) h5").remove();
+
+		  });
+
+
+	  });
+	</script>
+
+</body>
+</html>
