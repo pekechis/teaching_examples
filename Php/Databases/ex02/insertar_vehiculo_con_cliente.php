@@ -94,7 +94,7 @@
 
         echo $query;
 
-        if ($connection->query($query)) {m
+        if ($connection->query($query)) {
 
           echo "COCHE INSERTADO";
 

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+}
+
+#imagenes {
+    float: left;
+    overflow-y: auto;
+    width: 80%;
+}
+
+#imagenes>div {
+    float: left;
+    width: 20%;
+}
+
+.imagen {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#lista {
+    float: left;
+    width: 30%;
+}

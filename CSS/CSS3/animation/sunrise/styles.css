@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box
+}
+
+.container {
+    margin: 100px auto;
+    position: relative;
+    width: 300px;
+}
+
+
+/** z-index for everything **/
+
+#mountain {
+    z-index: 10;
+}
+
+#rays,
+#moon {
+    z-index: 8;
+}
+
+
+/** All the moving elements will be placed in the bottom left corner **/
+
+#moon,
+#rays {
+    bottom: 50px;
+    left: 0px;
+    position: absolute;
+    opacity: 0;
+}
+
+#moon {
+    animation-delay: 6s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: rotacion;
+}
+
+#rays {
+    animation-delay: 6s;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-name: rotacion, rayos;
+}
+
+@keyframes rayos {
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes rotacion {
+    5% {
+        left: 0px;
+        opacity: 1;
+    }
+    25% {
+        left: 125px;
+        bottom: 250px;
+    }
+    50% {
+        left: 250px;
+        bottom: 0px;
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+}
