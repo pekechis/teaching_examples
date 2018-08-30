@@ -3,6 +3,9 @@
 }
 
 .container {
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-name: skycolor;
     margin: 100px auto;
     position: relative;
     width: 300px;
@@ -12,29 +15,20 @@
 
 /** z-index for everything **/
 
-#mountain {
-    animation-duration: 24s;
-    animation-iteration-count: infinite;
-    animation-name: skycolor;
+#mountain {    
     position: absolute;
-    left: 0px;
-    bottom: 20px;
-    z-index: 1;
-}
-
-#mountain img {
-    border: 1px solid black;
-    
+    left: 0px;    
+    z-index: 10;
 }
 
 #rays,
 #moon {
-    z-index: 10;
+    z-index: 8;
 }
 
 #moon,
 #rays {
-    bottom: 30px;
+    bottom: 10px;
     left: 10px;
     position: absolute;
     opacity: 0;
@@ -96,20 +90,20 @@
     0% {
         opacity: 0;
         left: 10px;
-        bottom: 30px;
+        bottom: 10px;
     }
     20% {
         opacity: 1;
         left: 10px;
-        bottom: 30px;
+        bottom: 10px;
     }
     50% {
         left: 125px;
-        bottom: 250px;
+        bottom: 230px;
     }
     90% {
         left: 250px;
-        bottom: 30px;
+        bottom: 10px;
         opacity: 1;
     }
     91% {
@@ -117,7 +111,7 @@
     }
     100% {
         left: 10px;
-        bottom: 30px;
+        bottom: 10px;
     }
 }
 
@@ -125,20 +119,20 @@
     0% {
         opacity: 0;
         left: 10px;
-        bottom: 30px;
+        bottom: 10px;
     }
     20% {
         opacity: 1;
         left: 10px;
-        bottom: 30px;
+        bottom: 10px;
     }
     50% {
         left: 125px;
-        bottom: 250px;
+        bottom: 230px;
     }
     90% {
         left: 250px;
-        bottom: 30px;
+        bottom: 10px;
         opacity: 1;
     }
     91% {
@@ -146,6 +140,6 @@
     }
     100% {
         left: 10px;
-        bottom: 30px;
+        bottom: 10px;
     }
 }
