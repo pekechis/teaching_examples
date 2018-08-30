@@ -6,13 +6,24 @@
     margin: 100px auto;
     position: relative;
     width: 300px;
+    height: 300px;
 }
 
 
 /** z-index for everything **/
 
 #mountain {
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-name: skycolor;
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
     z-index: 10;
+}
+
+#mountain img {
+    border: 1px solid black;
 }
 
 #rays,
@@ -20,52 +31,90 @@
     z-index: 8;
 }
 
-
-/** All the moving elements will be placed in the bottom left corner **/
-
 #moon,
 #rays {
-    bottom: 50px;
-    left: 0px;
+    bottom: 30px;
+    left: 10px;
     position: absolute;
     opacity: 0;
 }
 
 #moon {
-    animation-delay: 6s;
-    animation-duration: 10s;
+    animation-delay: 10.5s;
+    animation-duration: 24s;
     animation-iteration-count: infinite;
-    animation-name: rotacion;
+    animation-name: rotacion-sol;
 }
 
 #rays {
-    animation-delay: 6s;
-    animation-duration: 14s;
+    animation-duration: 24s;
     animation-iteration-count: infinite;
-    animation-name: rotacion, rayos;
+    animation-name: rotacion-sol, rayos;
 }
 
 @keyframes rayos {
-    100% {
+    50% {
         transform: rotate(720deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
-@keyframes rotacion {
-    5% {
-        left: 0px;
-        opacity: 1;
+@keyframes rotacion-sol {
+    0% {
+        opacity: 0;
+        left: 10px;
+        bottom: 30px;
     }
-    25% {
+    20% {
+        opacity: 1;
+        left: 10px;
+        bottom: 30px;
+    }
+    50% {
         left: 125px;
         bottom: 250px;
     }
-    50% {
+    90% {
         left: 250px;
-        bottom: 0px;
+        bottom: 30px;
         opacity: 1;
     }
-    51% {
+    91% {
         opacity: 0;
+    }
+    100% {
+        left: 10px;
+        bottom: 30px;
+    }
+}
+
+@keyframes rotacion-luna {
+    0% {
+        opacity: 0;
+        left: 10px;
+        bottom: 30px;
+    }
+    20% {
+        opacity: 1;
+        left: 10px;
+        bottom: 30px;
+    }
+    50% {
+        left: 125px;
+        bottom: 250px;
+    }
+    90% {
+        left: 250px;
+        bottom: 30px;
+        opacity: 1;
+    }
+    91% {
+        opacity: 0;
+    }
+    100% {
+        left: 10px;
+        bottom: 30px;
     }
 }
