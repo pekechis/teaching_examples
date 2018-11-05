@@ -32,7 +32,7 @@
 
       //Accessing array elements
       //Accessing the element 1 on a indexed array
-      echo $v1[1]."<br>";
+      echo "<br>".$v1[1]."<br>";
       //Accessing the "Edad" element on a associative array
       echo $v2["Edad"]."<br>";
 
